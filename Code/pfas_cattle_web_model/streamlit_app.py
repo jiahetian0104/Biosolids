@@ -243,7 +243,12 @@ with right:
         y="Estimated exposure (ng/kg-bw/day)",
         text="Estimated exposure (ng/kg-bw/day)",
     )
-    fig2.add_hline(y=reference_dose, line_dash="dash", annotation_text="Reference dose")
+    fig2.add_hline(
+    y=reference_dose,
+    line_dash="dash",
+    annotation_text=f"Reference dose: {reference_dose:.3f} ng/kg-bw/day",
+    annotation_position="top left"
+    )
     fig2.update_traces(texttemplate="%{text:.3f}", textposition="outside")
     fig2.update_layout(height=500)
     st.plotly_chart(fig2, use_container_width=True)
@@ -269,7 +274,12 @@ if stover_values:
         y=["Child exposure (ng/kg-bw/day)", "Adult exposure (ng/kg-bw/day)"],
         markers=True,
     )
-    fig3.add_hline(y=reference_dose, line_dash="dash", annotation_text="Reference dose")
+    fig3.add_hline(
+    y=reference_dose,
+    line_dash="dash",
+    annotation_text=f"Reference dose = {reference_dose:.3f} ng/kg-bw/day",
+    annotation_position="top left"
+    )
     fig3.update_layout(yaxis_title="Exposure (ng/kg-bw/day)", height=450)
     st.plotly_chart(fig3, use_container_width=True)
 
