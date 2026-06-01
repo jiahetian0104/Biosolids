@@ -1,0 +1,25 @@
+Package: ShedsHT
+Title: The SHEDS-HT model for estimating human exposure to chemicals.
+Version: 0.1.10
+Author: Kristin Isaacs [aut, cre]
+Maintainer: Kristin Isaacs <isaacs.kristin@epa.gov>
+Description: The ShedsHT R package runs the Stochastic Human Exposure and Dose
+    Simulation-High Throughput screening model which estmates human exposure to a
+    wide range of chemicals.The people in SHEDS-HT are simulated individuals who
+    collectively form a representative sample of the target population, as chosen by
+    the user. The model is cross-sectional, with just one simulated day (24 hours)
+    for each simulated person, although the selected day is not necessarily the same
+    from one person to another. SHEDS-HT is stochastic, which means that many inputs
+    are sampled randomly from user-specified distributions that are intended to
+    capture variability. In the SHEDS series of models, variability and uncertainty
+    are typically handled by a two-stage Monte Carlo process, but SHEDS-HT currently
+    has a single stage and does not directly estimate uncertainty.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.1
+Imports: data.table, ggplot2, stringr, plyr
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+NeedsCompilation: no
+Packaged: 2024-04-23 21:33:27 UTC; kisaacs1

@@ -1,0 +1,61 @@
+---
+title: "Introduction to ShedsHT"
+author: ""
+date: "`r Sys.Date()`"
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{Introduction to SHEDS}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## 1. Introduction
+
+ShedsHT is an R package which is designed to run SHEDS-HT, Stochastic Human Exposure and Dose Simulation - High Throughput, a screening model for estimating human exposure to a wide range of chemicals. The people in SHEDS-HT are simulated individuals who collectively form a representative sample of the target population, as chosen by the user. The model is cross-sectional, with just one simulated day (24 hours) for each simulated person, although the selected day is not necessarily the same from one person to another. SHEDS-HT is stochastic, which means that many inputs are sampled randomly from user-specified distributions that are intended to capture variability. In the SHEDS series of models, variability and uncertainty are typically handled by a two-stage Monte Carlo process, but SHEDS-HT currently has a single stage and does not directly estimate uncertainty.
+
+There are many thousand chemicals with registered CAS numbers in commercial use. The previous SHEDS models were designed to handle just chemical (or just a few) per model run. Those SHEDS models were high-tier, performing detailed calculations that required much input data. By contrast, SHEDS-HT is a lower-tier "screening" model that requires relatively little input data for each chemical. This allows runs for thousands of chemicals to be practical.
+
+The source code consists of four files, together less than 1 Mb. The default input files occupy about 40 Mb. Depending on run options, a model run takes between a few minutes to several hours. The two most important factors affecting the running time are the number of chemicals and the number of simulated people.
+
+SHEDS-HT is a microenvironmental model. A "microenvironment" (abbreviated as "micro") in SHEDS refers to general information on location and activity that may be obtained from the activity diaries. The person's home is divided into two micros, one while awake and the other while sleeping, since the potential for exposure in those cases is different. Each micro may contain several "media" which are generally surfaces, air, or food, and which are potential sites for the chemical to reside until encountered by the person.
+
+
+## 2. Installation
+
+### 2.1 Installation via CRAN
+
+Currently this feature is not available. 
+
+### 2.2 Manual installation from source
+
+1. Download "ShedsHT_0.X.X.tar.gz" and save it to your hard disk.
+
+2. Open your R application, and enter the following statement to install the package (first install dependency package then the released package):
+
+```{r eval=FALSE}
+    # first check to see if dependency package is installed. If not, install from cran???
+    list.packages <- c("plyr","ggplot2","data.table","stringr", "knitr", "rmarkdown")
+    new.packages <- list.packages[!(list.packages %in% installed.packages()[,"Package"])]
+    if(length(new.packages)) install.packages(new.packages, repos="http://cran.rstudio.com/")
+    
+    install.packages("path/to/ShedsHT_0.1.1.tar.gz", repos = NULL, type = "source")
+```
+
+
+## 3. Getting Started
+
+### 3.1 Package setup and help documents
+
+To load the package, enter the following in your R session:
+
+```{r eval=FALSE}
+  library(ShedsHT)
+```
+
+Usually, if you do not see any error message or warning, it can be assumed that package "ShedsHT" has been successfully installed. Before executing any queries, please take a look at the user manual (this document) as well as a reference manual (help pages for each function). 
+
+Documentation for all the SHEDS-HT code functions are in the file "ShedsHT_0.#.#.pdf". The SHEDS-HT Technical Manual provides details of the model algorithms and data.  The SHEDS-HT Quick Start Guide is a short manual that provides straighforward instructions for getting SHEDS running quickly.
+
+Default input files for SHEDS-HT are  included in the R package, and can be accessed using the unpack() function.  The most up to date version of these files are found in the SHEDS-HT release Github repository.
+
+

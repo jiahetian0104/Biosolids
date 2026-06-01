@@ -1,0 +1,3550 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\hypertarget{description}{%
+\section{DESCRIPTION}\label{description}}
+
+\begin{verbatim}
+Package: ShedsHT
+Title: The SHEDS-HT model for estimating human exposure to chemicals.
+Version: 0.1.10
+Author: Kristin Isaacs [aut, cre]
+Maintainer: Kristin Isaacs <isaacs.kristin@epa.gov>
+Description: The ShedsHT R package runs the Stochastic Human Exposure and Dose
+    Simulation-High Throughput screening model which estmates human exposure to a
+    wide range of chemicals.The people in SHEDS-HT are simulated individuals who
+    collectively form a representative sample of the target population, as chosen by
+    the user. The model is cross-sectional, with just one simulated day (24 hours)
+    for each simulated person, although the selected day is not necessarily the same
+    from one person to another. SHEDS-HT is stochastic, which means that many inputs
+    are sampled randomly from user-specified distributions that are intended to
+    capture variability. In the SHEDS series of models, variability and uncertainty
+    are typically handled by a two-stage Monte Carlo process, but SHEDS-HT currently
+    has a single stage and does not directly estimate uncertainty.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.1
+Imports: data.table, ggplot2, stringr, plyr
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+NeedsCompilation: no
+Packaged: 2019-08-27 14:40:53 UTC; kisaacs1
+\end{verbatim}
+
+\hypertarget{act.diary.pools-act.diary.pools}{%
+\section{\texorpdfstring{\texttt{act.diary.pools}:
+act.diary.pools}{act.diary.pools: act.diary.pools}}\label{act.diary.pools-act.diary.pools}}
+
+\hypertarget{description-1}{%
+\subsection{Description}\label{description-1}}
+
+Assigns activity diaries from the
+\texttt{{[}Activity\_diaries{]}(Activity\_diaries)} input on the
+\texttt{{[}Run{]}(Run)} file (read through the
+\texttt{{[}read.act.diaries{]}(read.act.diaries)} function) to pools
+based on age, gender, and season
+
+\hypertarget{usage}{%
+\subsection{Usage}\label{usage}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{act.diary.pools}\NormalTok{(diaries, specs)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments}{%
+\subsection{Arguments}\label{arguments}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{diaries}: A data set created internally in SHEDS.HT through
+  the \texttt{{[}read.act.diaries{]}(read.act.diaries)} function. The
+  data are activity diaries, which indicate the amount of time and level
+  of metabolic activity in various micro environments. Each line of data
+  represents one person-day (24 hours).
+\item
+  \texttt{specs}: Output of the
+  \texttt{{[}read.run.file{]}(read.run.file)} function, which can be
+  modified by the \texttt{{[}update.specs{]}(update.specs)} function
+  before input into \texttt{act.diary.pools}.
+\end{itemize}
+
+\hypertarget{details}{%
+\subsection{Details}\label{details}}
+
+The \texttt{act.diary.pools} function assigns the activity diaries to
+pools. A given diary may belong to many pools, since every year of age
+has its own pool. Large pools may contain a list of several hundred
+diary numbers. The code contains four loops and on each step performs a
+sub-setting of the list of diary numbers.
+
+\hypertarget{note}{%
+\subsection{Note}\label{note}}
+
+The input to \texttt{act.diary.pools}, diaries, is created by reading in
+the Activity\_diaries input file (specified on the
+\texttt{{[}Run{]}(Run)} file) with the
+\texttt{{[}read.act.diaries{]}(read.act.diaries)} function within the
+\texttt{{[}run{]}(run)} function.
+
+\hypertarget{author}{%
+\subsection{Author}\label{author}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso}{%
+\subsection{Seealso}\label{seealso}}
+
+\texttt{{[}run{]}(run)}
+
+\hypertarget{value}{%
+\subsection{Value}\label{value}}
+
+pool A vector of lists. The length of \texttt{pool} is the product of
+the genders, seasons, and ages inputs specified in the
+\texttt{{[}Run{]}(Run)} file. Each element is a list of acceptable
+activity diary numbers for each year of age, gender, weekend, and season
+combination. For example, \texttt{pool}{[}100{]} may have the name
+M0P99, which indicates that it is for males, on weekdays, in spring,for
+age=99. In addition, If the function runs successfully, the following
+message will be printed: ``Activity Diary Pooling completed''
+
+\hypertarget{add.factors-add.factors}{%
+\section{\texorpdfstring{\texttt{add.factors}:
+add.factors}{add.factors: add.factors}}\label{add.factors-add.factors}}
+
+Adds specific exposure factors to the \texttt{pdm} data table, which is
+output from the \texttt{{[}add.media{]}(add.media)} function. Here,
+``specific'' means taking into account the age, gender, season, and
+exposure media for each person.
+
+\hypertarget{description-2}{%
+\subsection{Description}\label{description-2}}
+
+add.factors Adds specific exposure factors to the \texttt{pdm} data
+table, which is output from the \texttt{{[}add.media{]}(add.media)}
+function. Here, ``specific'' means taking into account the age, gender,
+season, and exposure media for each person.
+
+\hypertarget{usage-1}{%
+\subsection{Usage}\label{usage-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{add.factors}\NormalTok{(n, gen.f, med.f, exp.f, surf, pdm)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-1}{%
+\subsection{Arguments}\label{arguments-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{n}: Number of persons
+\item
+  \texttt{gen.f}: Non-media specific exposure factors as a data table.
+  Output from the \texttt{{[}gen.factor.tables{]}(gen.factor.tables)}
+  function.
+\item
+  \texttt{med.f}: Media specific exposure factors presented as a data
+  table. Output from the
+  \texttt{{[}med.factor.tables{]}(med.factor.tables)} function.
+\item
+  \texttt{exp.f}: Distributional parameters for the exposure factors.
+  Output of the \texttt{{[}exp.factors{]}(exp.factors)} function.
+\item
+  \texttt{surf}: A list of surface media. Modified output of the
+  \texttt{{[}read.media.file{]}(read.media.file)} function.
+\item
+  \texttt{pdm}: A data table containing the \texttt{pd} data frame of
+  physiological and demographic parameters for each theoretical person,
+  and the \texttt{dur} array, which specifies the duration of exposure
+  to each potential exposure medium for each person in \texttt{pd}.
+  Output of the \texttt{{[}add.media{]}(add.media)} function.
+\end{itemize}
+
+\hypertarget{details-1}{%
+\subsection{Details}\label{details-1}}
+
+The process of adding specific exposure factors to \texttt{pdm} involves
+multiple steps. First, \texttt{w} is determined, which is the number of
+general factors plus the product of the number of media-specific factors
+and the number of surface media. Air media do not have media specific
+factors in this version of SHEDS. An array, \texttt{q}, of uniform
+random samples is generated, with one row per person and \texttt{w}
+columns. A zero matrix, \texttt{r}, of the same size is defined. Once
+these matrices are defined, the media-specific factors are determined.
+Two nested loops over variable and surface type generate the values,
+which are stored in \texttt{r}. Next, another FOR loop determines the
+general factors. The \texttt{p} data set contains the age, gender, and
+season for each person. These two data sets are then merged. The
+evaluation of these factors is handled by the
+\texttt{{[}eval.factors{]}(eval.factors)} function. One of the exposure
+factors is \texttt{handwash.freq}. This was also part of
+SHEDS-Multimedia, where it represented the mean number of hours in the
+day with hand washing events. An important aspect of that model was that
+because each person was followed longitudinally, the actual number of
+hand washes on each day varied from one day to the next. Because of
+this, the distribution for \texttt{handwash.freq} did not need to be
+restricted to integer values, as (for example) a mean of 4.5 per day is
+acceptable and achievable, while choosing integer numbers of hand washes
+each day. One of the early goals with SHEDS.HT was to attempt to
+reproduce selected results from SHEDS-Multimedia. Therefore, similar
+logic was built into the current model. The \texttt{hand.washes}
+variable is sampled from a distribution centered on
+\texttt{handwash.freq}, and then rounded to the nearest integer. The
+\texttt{bath} variable is another difficult concept. In theory, baths
+and showers are recorded on the activity diaries. In practice, the
+activity diaries were constructed from approximately 20 separate
+studies, some of which did not contain enough detail to identify
+separate bath or shower events. The result is that about half of all
+diaries record such events, but the true rate in the population is
+higher. The \texttt{bath.p} variable was created to address this. It
+represents the probability that a non bath/shower activity diary should
+actually have one. Therefore, if the diary has one, then SHEDS
+automatically has one. Otherwise, a binomial sample using
+\texttt{bath.p} as the probability is drawn. A bath/shower occurs unless
+both of these are zero. The effectiveness of hand washes or bath/shower
+at removing chemical from the skin is determined in the
+\texttt{{[}post.exposure{]}(post.exposure)} function.
+
+\hypertarget{author-1}{%
+\subsection{Author}\label{author-1}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-1}{%
+\subsection{Seealso}\label{seealso-1}}
+
+\texttt{{[}eval.factors{]}(eval.factors)},
+\texttt{{[}post.exposure{]}(post.exposure)}
+
+\hypertarget{value-1}{%
+\subsection{Value}\label{value-1}}
+
+pdmf A data set containing the \texttt{pdm} data table as well as media
+specific exposure factors, the number of baths taken, and the number of
+hand wash events occurring per day per person contained in \texttt{pdm}.
+
+\hypertarget{add.fugs-add.fugs}{%
+\section{\texorpdfstring{\texttt{add.fugs}:
+add.fugs}{add.fugs: add.fugs}}\label{add.fugs-add.fugs}}
+
+\hypertarget{description-3}{%
+\subsection{Description}\label{description-3}}
+
+Evaluates the variables in the fugacity input file and creates values
+for those variables corresponding to each simulated person.
+
+\hypertarget{usage-2}{%
+\subsection{Usage}\label{usage-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{add.fugs}\NormalTok{(n.per, x, pdmf)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-2}{%
+\subsection{Arguments}\label{arguments-2}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{n.per}: The total number of simulated persons in this model
+  run specified in the \texttt{{[}Run{]}(Run)} file
+\item
+  \texttt{x}: the output of the
+  \texttt{{[}read.fug.inputs{]}(read.fug.inputs)} function.
+\item
+  \texttt{pdmf}: he output of the
+  \texttt{{[}add.factors{]}(add.factors)} function. A data set
+  containing physiological and demographic parameters for each
+  theoretical person, the duration of exposure to each potential
+  exposure medium for each person, the media specific exposure factors,
+  and the number of baths taken and hand wash events occurring per day
+  for each person.
+\end{itemize}
+
+\hypertarget{keyword}{%
+\subsection{Keyword}\label{keyword}}
+
+SHEDS
+
+\hypertarget{details-2}{%
+\subsection{Details}\label{details-2}}
+
+This function evaluates the variables in the fugacity input file,
+creating one value for each simulated person and adding each variable as
+a new column in the pdmf data set (renamed as pdmff). All variables are
+left i n their original units except for those with units ug/cm2, which
+are converted to ug/m2. In the fugacity calculations, all masses are in
+ug and all lengths are in m.
+
+\hypertarget{author-2}{%
+\subsection{Author}\label{author-2}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-2}{%
+\subsection{Seealso}\label{seealso-2}}
+
+\texttt{{[}add.factors{]}(add.factors)},
+\texttt{{[}add.media{]}(add.media)},
+\texttt{{[}select\_people{]}(select\_people)},
+\texttt{{[}Fugacity{]}(Fugacity)}, \texttt{{[}run{]}(run)}
+
+\hypertarget{value-2}{%
+\subsection{Value}\label{value-2}}
+
+pdmff Output contains values sampled from the distributions of each
+relevant variable in the \texttt{{[}Fugacity{]}(Fugacity)} input file
+for each theoretical person.
+
+\hypertarget{add.media-add.media}{%
+\section{\texorpdfstring{\texttt{add.media}:
+add.media}{add.media: add.media}}\label{add.media-add.media}}
+
+\hypertarget{description-4}{%
+\subsection{Description}\label{description-4}}
+
+For each theoretical person parameterized in the \texttt{pd} data frame,
+which is output from the
+\texttt{{[}select.people{]}(select.people)}function, this function
+generates the exposure duration for each potential exposure medium.
+
+\hypertarget{usage-3}{%
+\subsection{Usage}\label{usage-3}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{add.media}\NormalTok{(n, media, pd)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-3}{%
+\subsection{Arguments}\label{arguments-3}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{n}: Number of persons.
+\item
+  \texttt{media}: List of the potential contact media for the model;
+  output of the \texttt{{[}read.media.file{]}(read.media.file)}
+  function. Each is found in a specific microenvironment (micro).
+\item
+  \texttt{pd}: Data frame containing internally assigned demographic and
+  physiological parameters for each theoretical person modeled in
+  SHEDS.HT. Output of the \texttt{{[}select.people{]}(select.people)}
+  function
+\end{itemize}
+
+\hypertarget{details-3}{%
+\subsection{Details}\label{details-3}}
+
+To generate the exposure duration for each theoretical person, an array
+q of uniform random samples is generated with rows = \texttt{n} (per
+set, where set size is specified by the user in the
+\texttt{{[}Run{]}(Run)} input file) and columns = \texttt{nrow(media)}
+(the number of potential exposure media). An array called \texttt{dur}
+is created for the number of minutes on the activity diary in the
+relevant micro multiplied by the relevant probability of contact (as
+specified in the \texttt{media} input). The array consists of a row for
+each person and a column for each of the exposure media. The output is a
+data table containing the \texttt{pd} data frame and the \texttt{dur}
+array.
+
+\hypertarget{author-3}{%
+\subsection{Author}\label{author-3}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-3}{%
+\subsection{Seealso}\label{seealso-3}}
+
+\texttt{{[}select.people{]}(select.people)},
+\texttt{{[}read.media.file{]}(read.media.file)}
+
+\hypertarget{value-3}{%
+\subsection{Value}\label{value-3}}
+
+pdm A data table containing the \texttt{pd} data frame of physiological
+and demographic parameters for each theoretical person, and the
+\texttt{dur} array, which specifies the duration of exposure to each
+potential exposure medium for each person in \texttt{pd}.
+
+\hypertarget{allstats.variable.rank.plot-allstats.variable.rank.plot}{%
+\section{\texorpdfstring{\texttt{allstats.variable.rank.plot}:
+allstats.variable.rank.plot}{allstats.variable.rank.plot: allstats.variable.rank.plot}}\label{allstats.variable.rank.plot-allstats.variable.rank.plot}}
+
+\hypertarget{usage-4}{%
+\subsection{Usage}\label{usage-4}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{allstats.variable.rank.plot}\NormalTok{(}
+  \AttributeTok{run.name =}\NormalTok{ specs}\SpecialCharTok{$}\NormalTok{run.name,}
+  \AttributeTok{output.variable =} \StringTok{"abs.tot.mgkg"}\NormalTok{,}
+  \AttributeTok{metrics =} \FunctionTok{c}\NormalTok{(}\StringTok{"50\%"}\NormalTok{, }\StringTok{"95\%"}\NormalTok{, }\StringTok{"mean"}\NormalTok{),}
+  \AttributeTok{cohort.col =} \StringTok{"Total"}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-4}{%
+\subsection{Arguments}\label{arguments-4}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{run.name}: default = name of last run (in current R session)
+\item
+  \texttt{output.variable}: default = abs.tot.mgkg (mg/kg/day).
+\item
+  \texttt{metrics}: argument is a vector of character strings with
+  desired percentiles or metrics. default =
+  c(``50\itemcohort.colagurment vector of different cohorts. default
+  =''Total''. To add cohorts use a vector of concatenated character
+  strings, such as cohort.col = c(``Total'', ``Male'', ``Female'')a plot
+  of output.variable vs chemical rankallstats.variable.rank.plot is a
+  ggplot scatter plot with output.variable on the y axis and chemical
+  rank on the x axis. User can color points by cohort (see
+  ``cohort.col'' argument) and assign percentiles to be points (see
+  ``metrics'' argument)A SHEDS run creates an output file for each
+  chemical. This plot pulls from the allstats.csv for each chemical in
+  the output file. Chemicals are ranked in ascending order of
+  output.variable on the x axis. The y axis is log transformed and a
+  constant of 1e-10 added to y variable for log transformation of 0's.
+  The default color is black for the ``Total'' cohort, but user can
+  include as many cohorts as they wish as long as they are calculated in
+  the SHEDS run. Percentiles must be calculated in SHEDS run.the
+  selected cohorts.
+\end{itemize}
+
+\hypertarget{check.foods-check.foods}{%
+\section{\texorpdfstring{\texttt{check.foods}:
+check.foods}{check.foods: check.foods}}\label{check.foods-check.foods}}
+
+This function creates a list of unique food types.
+
+\hypertarget{description-5}{%
+\subsection{Description}\label{description-5}}
+
+check.foods This function creates a list of unique food types.
+
+\hypertarget{usage-5}{%
+\subsection{Usage}\label{usage-5}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{check.foods}\NormalTok{(s)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{check.src.scen.flags-check.src.scen.flags}{%
+\section{\texorpdfstring{\texttt{check.src.scen.flags}:
+check.src.scen.flags}{check.src.scen.flags: check.src.scen.flags}}\label{check.src.scen.flags-check.src.scen.flags}}
+
+\hypertarget{description-6}{%
+\subsection{Description}\label{description-6}}
+
+This function checks whether the settings on the source.scen object
+(input as ``df'') are set to numeric values of 1 or 0. If the column for
+a particular exposure scenario is missing from ``df'', it is created and
+assigned ``0'' for all sources.
+
+\hypertarget{usage-6}{%
+\subsection{Usage}\label{usage-6}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{check.src.scen.flags}\NormalTok{(df)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{check.src.scen.types-check.src.scen.types}{%
+\section{\texorpdfstring{\texttt{check.src.scen.types}:
+Check.src.scen.types}{check.src.scen.types: Check.src.scen.types}}\label{check.src.scen.types-check.src.scen.types}}
+
+\hypertarget{description-7}{%
+\subsection{Description}\label{description-7}}
+
+This function checks whether the settings on the source.scen object
+(input as ``df'') are consistent with the source.type for each source.
+
+\hypertarget{usage-7}{%
+\subsection{Usage}\label{usage-7}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{check.src.scen.types}\NormalTok{(df)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{chem.fug-chem.fug}{%
+\section{\texorpdfstring{\texttt{chem.fug}:
+chem.fug}{chem.fug: chem.fug}}\label{chem.fug-chem.fug}}
+
+\hypertarget{description-8}{%
+\subsection{Description}\label{description-8}}
+
+Creates distributions of chemical specific parameters for each chemical
+of interest, in order to reflect real-world variability and uncertainty.
+These distributions are then sampled to create chemical specific
+parameters associated with the exposure of each simulated person.
+
+\hypertarget{usage-8}{%
+\subsection{Usage}\label{usage-8}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chem.fug}\NormalTok{(n.per, cprops, x)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-5}{%
+\subsection{Arguments}\label{arguments-5}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{n.per}: The total number of simulated persons in this model
+  run specified in the \texttt{{[}Run{]}(Run)} file.
+\item
+  \texttt{cprops}: The chemical properties required for SHEDS-HT (output
+  of \texttt{chem.props} function). The default data was prepared from
+  publicly available databases using a custom program (not part of
+  SHEDS-HT). The default file contains about 17 numerical inputs per
+  chemical, but most are not used. The required properties are molecular
+  weight (\texttt{MW}), vapor pressure (\texttt{VP.Pa}), solubility
+  (\texttt{water.sol.mg.l}), octanol-water partition coefficient
+  (\texttt{log.Kow}), air decay rate (\texttt{half.air.hr}), decay rate
+  on surfaces (\texttt{half.sediment.hr}), and permeability coefficient
+  (\texttt{Kp}).
+\item
+  \texttt{x}: From the output of the
+  \texttt{{[}read.fug.inputs{]}(read.fug.inputs)} function.
+\end{itemize}
+
+\hypertarget{keyword-1}{%
+\subsection{Keyword}\label{keyword-1}}
+
+SHEDS
+
+\hypertarget{details-4}{%
+\subsection{Details}\label{details-4}}
+
+This function obtains chemical-specific properties from the chem.data
+data set.That data set contains point value for each variable, which
+this function defines distributions around, with the exception of
+molecular weight. The constructed distributions reflect both uncertainty
+and variability (for example, vapor pressure will vary with temperature,
+humidity, and air pressure or altitude, and may depend on the product
+formulation). For each variable, a random sample is generated for each
+simulated person, and the set of variables becomes the output data set.
+Input surface loading variables are in units of ug/cm2 or ug/cm2/day and
+are converted by the function to meters, to avoid the need for
+conversion factors in later equations. These conversions are done after
+the random sampling, as otherwise the correct conversions depend on the
+distributional form (for example, par2 is changed for the normal, but
+not for the lognormal).
+
+\hypertarget{author-4}{%
+\subsection{Author}\label{author-4}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-4}{%
+\subsection{Seealso}\label{seealso-4}}
+
+\texttt{{[}Fugacity{]}(Fugacity)}, \texttt{{[}Run{]}(Run)},
+\texttt{{[}run{]}(run)}, \texttt{{[}Chem\_props{]}(Chem\_props)},
+\texttt{{[}get.fug.concs{]}(get.fug.concs)}
+
+\hypertarget{value-4}{%
+\subsection{Value}\label{value-4}}
+
+samples A data set with the chemical specific parameters for each
+combination of chemical and simulated person. For each chemical, the
+chemical specific parameters assigned to a given person are randomly
+sampled from distributions on those parameters. These distributions are
+created from point estimates to reflect real-world uncertainty and
+variability.
+
+\hypertarget{chem.scenarios-chem.scenarios}{%
+\section{\texorpdfstring{\texttt{chem.scenarios}:
+chem.scenarios}{chem.scenarios: chem.scenarios}}\label{chem.scenarios-chem.scenarios}}
+
+\hypertarget{description-9}{%
+\subsection{Description}\label{description-9}}
+
+This function summarizes the all.scenarios data set by condensing each
+chemical-scenario combination into one row. The number of rows of data
+for this combination on all.scenarios is recorded here.
+
+\hypertarget{usage-9}{%
+\subsection{Usage}\label{usage-9}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chem.scenarios}\NormalTok{(all)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-6}{%
+\subsection{Arguments}\label{arguments-6}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{all}: This is the master list of all chemicals, and all
+  exposure scenarios specific to each chemical, to be evaluated in the
+  current model run. This data set is compiled internally according to
+  the user's specifications on the \texttt{{[}Run\_85687{]}(Run\_85687)}
+  file. The user may create multiple scenarios files for special
+  purposes, for example, for selected chemical classes, or selected
+  exposure pathways. A model run consists of two nested loops: the outer
+  loop over chemicals and the inner loop over the scenarios specific to
+  that chemical.
+\end{itemize}
+
+\hypertarget{author-5}{%
+\subsection{Author}\label{author-5}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-5}{%
+\subsection{Seealso}\label{seealso-5}}
+
+\texttt{{[}Run{]}(Run)},
+\texttt{{[}Source\_chem\_foods{]}(Source\_chem\_foods)},
+\texttt{{[}Source\_chem\_prods{]}(Source\_chem\_prods)},
+\texttt{{[}Source\_scen\_food{]}(Source\_scen\_food)},
+\texttt{{[}Source\_scen\_prods{]}(Source\_scen\_prods)}
+
+\hypertarget{value-5}{%
+\subsection{Value}\label{value-5}}
+
+\hypertarget{combine_output-combine_output}{%
+\section{\texorpdfstring{\texttt{combine\_output}:
+combine\_output}{combine\_output: combine\_output}}\label{combine_output-combine_output}}
+
+\hypertarget{description-10}{%
+\subsection{Description}\label{description-10}}
+
+combine\_output is a post-processing tool that extracts selected
+statistics (those specified in the `metrics' argument) from the
+`allstats' file for each chemical in a single model run, and combines
+them onto out.file.
+
+\hypertarget{usage-10}{%
+\subsection{Usage}\label{usage-10}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{combine\_output}\NormalTok{(}
+  \AttributeTok{run.name =}\NormalTok{ specs}\SpecialCharTok{$}\NormalTok{run.name,}
+  \AttributeTok{out.file =} \StringTok{"SHEDSOutCombined.csv"}\NormalTok{,}
+  \AttributeTok{metrics =} \FunctionTok{c}\NormalTok{(}\StringTok{"5\%"}\NormalTok{, }\StringTok{"50\%"}\NormalTok{, }\StringTok{"75\%"}\NormalTok{, }\StringTok{"95\%"}\NormalTok{, }\StringTok{"99\%"}\NormalTok{, }\StringTok{"mean"}\NormalTok{, }\StringTok{"sd"}\NormalTok{)}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-7}{%
+\subsection{Arguments}\label{arguments-7}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{run.name}: default = name of last run (in current R session)
+\item
+  \texttt{out.file}: default=``SHEDSOutCombined.csv''
+\item
+  \texttt{metrics}: the summary statsistics to be pulled. default =
+  c(``5\%'', ``50\%'', ``75\%'', ``95\%'', ``99\%'',``mean'',``sd'')
+\end{itemize}
+
+\hypertarget{details-5}{%
+\subsection{Details}\label{details-5}}
+
+In a multichemical run, SHEDS creates separate output files for each
+chemical. If the analyst wants to compare exposure or dose metrics
+across chemicals, use combine\_output to put the relevant information
+for all chemicals together on one file.
+
+\hypertarget{author-6}{%
+\subsection{Author}\label{author-6}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{value-6}{%
+\subsection{Value}\label{value-6}}
+
+finaldata A R object that has ``exp.dermal'', ``exp.ingest'',
+m''exp.inhal'', ``dose.inhal'', ``dose.intake'', ``abs.dermal.ug'',
+``abs.ingest.ug'', ``abs.inhal.ug'', ``abs.tot.ug'', ``abs.tot.mgkg'',
+``ddd.mass'' for the chemcial of question. This is tablated for the
+``5\%'', ``50\%'', ``75\%'', ``95\%'', ``99\%'', quantile of exposure as
+well as the mean and sd
+``finaldata,paste0(''output/``,run.name,''/``,out.file.csv'') this is
+the CSV of finaldata
+
+\hypertarget{create.scen.factors-create.scen.factors}{%
+\section{\texorpdfstring{\texttt{create.scen.factors}:
+create.scen.factors}{create.scen.factors: create.scen.factors}}\label{create.scen.factors-create.scen.factors}}
+
+\hypertarget{description-11}{%
+\subsection{Description}\label{description-11}}
+
+This function takes the information on distributions from the
+\texttt{all.scenarios} data set (which comes from the
+\texttt{{[}source\_variables\_12112015{]}(source\_variables\_12112015)}
+input file) and converts it into the parameter set needed by SHEDS.HT.
+
+\hypertarget{usage-11}{%
+\subsection{Usage}\label{usage-11}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{create.scen.factors}\NormalTok{(f)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-8}{%
+\subsection{Arguments}\label{arguments-8}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{f}: An internally generated data set from the
+  \texttt{{[}Source\_vars{]}(Source\_vars)} input file (as specified in
+  the \texttt{{[}Run{]}(Run)} file) containing data on the distribution
+  of each source variable in SHEDS.HT.
+\end{itemize}
+
+\hypertarget{details-6}{%
+\subsection{Details}\label{details-6}}
+
+The steps involved in this function are 1) converting
+\texttt{prevalence} from a percentage to a binomial form, 2) converting
+\texttt{CV} to standard deviation for normals, and 3) converting
+\texttt{Mean} and \texttt{CV} to par1 and par2 for lognormals. Note that
+\texttt{prevalence} in SHEDS becomes a binomial distribution, which
+returns a value of either 0 or 1 when evaluated. Each simulated person
+either ``does'' or ``does not'' partake in this scenario. Similar logic
+applies to the \texttt{frequency}variable, except that the returned
+values may be larger than one (that is, 2 or more) for very frequent
+scenarios. All the exposure equations contain the \texttt{prevalence}
+variable. If \texttt{prevalence} is set to one for that person, the
+exposure is as expected, but if \texttt{prevalence}=0 then no exposure
+occurs.
+
+\hypertarget{author-7}{%
+\subsection{Author}\label{author-7}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-6}{%
+\subsection{Seealso}\label{seealso-6}}
+
+\texttt{{[}Source\_vars{]}(Source\_vars)}, \texttt{{[}Run{]}(Run)}
+
+\hypertarget{value-7}{%
+\subsection{Value}\label{value-7}}
+
+dt A data set with values and probabilities associated with each
+variable distribution presented in \texttt{f}. All variables in
+\texttt{f} are also retained.
+
+\hypertarget{diet.diary.pools-diet.diary.pools}{%
+\section{\texorpdfstring{\texttt{diet.diary.pools}:
+diet.diary.pools}{diet.diary.pools: diet.diary.pools}}\label{diet.diary.pools-diet.diary.pools}}
+
+\hypertarget{description-12}{%
+\subsection{Description}\label{description-12}}
+
+Assigns activity diaries from the
+\texttt{{[}Diet\_diaries{]}(Diet\_diaries)} input on the
+\texttt{{[}Run{]}(Run)} file (read through the
+\texttt{{[}read.run.file{]}(read.run.file)} function) to pools based on
+age and gender.
+
+\hypertarget{usage-12}{%
+\subsection{Usage}\label{usage-12}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{diet.diary.pools}\NormalTok{(diaries, specs)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-9}{%
+\subsection{Arguments}\label{arguments-9}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{specs}: Output of the
+  \texttt{{[}read.run.file{]}(read.run.file)} function, which can be
+  modified by the \texttt{{[}update.specs{]}(update.specs)} function
+  before input into \texttt{diet.diary.pools}.
+\item
+  \texttt{diet.diaries}: A data set created internally in SHEDS.HT
+  through the \texttt{{[}read.diet.diaries{]}(read.diet.diaries)}
+  function. The data are daily diaries of dietary consumption by food
+  group. Each line represents one person-day, with demographic variables
+  followed by amounts (in grams/day) for a list of food types indicated
+  by a short abbreviation on the header line.
+\end{itemize}
+
+\hypertarget{details-7}{%
+\subsection{Details}\label{details-7}}
+
+The \texttt{diet.diary.pools} function assigns the dietary diaries to
+pools. A given diary may belong to many pools, since every year of age
+has its own pool. Large pools may contain a list of several hundred
+diary numbers. The code contains four loops and on each step performs a
+sub-setting of the list of diary numbers.
+
+\hypertarget{note-1}{%
+\subsection{Note}\label{note-1}}
+
+The input to \texttt{diet.diary.pools}, \texttt{diet.diaries}, is
+created by reading in the
+\texttt{{[}Diet\_diaries{]}(Diet\_diaries)}input file (specified on the
+\texttt{{[}Run{]}(Run)} file) with the
+\texttt{{[}read.diet.diaries{]}(read.diet.diaries)} function within the
+\texttt{{[}run{]}(run)} function.
+
+\hypertarget{author-8}{%
+\subsection{Author}\label{author-8}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-7}{%
+\subsection{Seealso}\label{seealso-7}}
+
+\texttt{{[}Diet\_diaries{]}(Diet\_diaries)}, \texttt{{[}run{]}(run)},
+\texttt{{[}read.run.file{]}(read.run.file)}, \texttt{{[}Run{]}(Run)}
+
+\hypertarget{value-8}{%
+\subsection{Value}\label{value-8}}
+
+dpool A vector of lists. The length of \texttt{dpool} is the product of
+the gender and age inputs specified in the \texttt{{[}Run{]}(Run)} file.
+Each element is a list of acceptable diet diary numbers for each year of
+age and each gender combination. In addition, if the function runs
+successfully, the following message will be printed: ``Dietary Diary
+Pooling completed''
+
+\hypertarget{dir.dermal-dir.dermal}{%
+\section{\texorpdfstring{\texttt{dir.dermal}:
+dir.dermal}{dir.dermal: dir.dermal}}\label{dir.dermal-dir.dermal}}
+
+\hypertarget{description-13}{%
+\subsection{Description}\label{description-13}}
+
+Models the dermal exposure scenario for each theoretical person.
+
+\hypertarget{usage-13}{%
+\subsection{Usage}\label{usage-13}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dir.dermal}\NormalTok{(sd, cd)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-10}{%
+\subsection{Arguments}\label{arguments-10}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{sd}: The chemical-scenario data specific to relevant
+  combinations of chemical and scenario. Generated internally.
+\item
+  \texttt{cd}: The list of scenario-specific information for the
+  chemicals being evaluated. Generated internally.
+\end{itemize}
+
+\hypertarget{details-8}{%
+\subsection{Details}\label{details-8}}
+
+The dermal exposure scenario is relatively straightforward. The function
+produces a prevalence value, which reflects the fraction of the
+population who use this scenario at all. It also produces a frequency
+value, which is the mean number of times per year this scenario occurs
+among that fraction of the population specified by prevalence. Since
+SHEDS operates on the basis of one random day, the frequency is divided
+by 365 and then passed to the \texttt{{[}p.round{]}(p.round)}
+(probabilistic rounding) function, which rounds either up or down to the
+nearest integer. Very common events may happen more than once in a day.
+The function also produces a mass variable, which refers to the mass of
+the product in grams in a typical usage event. The composition is the
+percentage of that mass that is the chemical in question. The resid
+variable measures the fraction that is likely to remain on the skin when
+the usage event ends. The final output is the total dermal exposure for
+each chemical-individual combination in micrograms, which is the product
+of the above variables multiplied by a factor of 1E+06.
+
+\hypertarget{author-9}{%
+\subsection{Author}\label{author-9}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-8}{%
+\subsection{Seealso}\label{seealso-8}}
+
+\texttt{{[}run{]}(run)}, \texttt{{[}p.round{]}(p.round)}
+
+\hypertarget{value-9}{%
+\subsection{Value}\label{value-9}}
+
+dir.derm For each person, the calculated direct dermal exposure that
+occurs when a chemical-containing product is used. This does not include
+later contact with treated objects, which is indirect exposure.
+
+\hypertarget{dir.ingested-dir.ingested}{%
+\section{\texorpdfstring{\texttt{dir.ingested}:
+dir.ingested}{dir.ingested: dir.ingested}}\label{dir.ingested-dir.ingested}}
+
+\hypertarget{description-14}{%
+\subsection{Description}\label{description-14}}
+
+Models the ingestion exposure scenario for each theoretical person.
+
+\hypertarget{usage-14}{%
+\subsection{Usage}\label{usage-14}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dir.ingested}\NormalTok{(sd, cd)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-11}{%
+\subsection{Arguments}\label{arguments-11}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{sd}: The chemical-scenario data specific to relevant
+  combinations of chemical and scenario. Generated internally.
+\item
+  \texttt{cd}: The list of scenario-specific information for the
+  chemicals being evaluated. Generated internally.
+\end{itemize}
+
+\hypertarget{details-9}{%
+\subsection{Details}\label{details-9}}
+
+This scenario is for accidental ingestion during product usage. Typical
+examples are toothpaste, mouthwash, lipstick or chap stick, and similar
+products used on the face or mouth. The function produces a
+\texttt{prevalence} value, which reflects the fraction of the population
+who use this scenario at all. It also produces a \texttt{frequency}
+value, which is the mean number of times per year this scenario occurs
+among that fraction of the population specified by prevalence. Since
+SHEDS operates on the basis of one random day, the frequency is divided
+by 365 and then passed to the \texttt{{[}p.round{]}(p.round)}
+(probabilistic rounding) function, which rounds either up or down to the
+nearest integer. Very common events may happen more than once in a day.
+The function also produces a \texttt{mass} variable, which refers to the
+mass of the product in grams in a typical usage event. The
+\texttt{composition} is the percentage of that mass that is the chemical
+in question. The \texttt{ingested} variable represents the percentage of
+the mass applied that becomes ingested. Since these products are not
+intended to be swallowed, this should typically be quite small (under
+5\%). The final output is the total incidental ingested exposure for
+each chemical-individual combination in micrograms, which is the product
+of the above variables multiplied by a factor of 1E6.
+
+\hypertarget{author-10}{%
+\subsection{Author}\label{author-10}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{value-10}{%
+\subsection{Value}\label{value-10}}
+
+dir.ingest For each person, the calculated quantity of a given chemical
+incidentally ingested during or immediately after use of products such
+as toothpaste. Does not include exposure via food and drinking water.
+
+\hypertarget{dir.inhal.aer-dir.inhal.aer}{%
+\section{\texorpdfstring{\texttt{dir.inhal.aer}:
+dir.inhal.aer}{dir.inhal.aer: dir.inhal.aer}}\label{dir.inhal.aer-dir.inhal.aer}}
+
+\hypertarget{description-15}{%
+\subsection{Description}\label{description-15}}
+
+Models the inhalation exposure from the use of aerosol products for each
+theoretical person.
+
+\hypertarget{usage-15}{%
+\subsection{Usage}\label{usage-15}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dir.inhal.aer}\NormalTok{(sd, cd, cb, io)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-12}{%
+\subsection{Arguments}\label{arguments-12}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{sd}: The chemical-scenario data specific to relevant
+  combinations of chemical and scenario. Generated internally.
+\item
+  \texttt{cd}: The list of scenario-specific information for the
+  chemicals being evaluated. Generated internally.
+\item
+  \texttt{cb}: A copy of the \texttt{base} data set output from the
+  \texttt{{[}make.cbase{]}(make.cbase)} function, with columns added for
+  exposure variables.
+\item
+  \texttt{io}: A binary variable indicating whether the volume of the
+  aerosol is used to approximate the affected volume.
+\end{itemize}
+
+\hypertarget{details-10}{%
+\subsection{Details}\label{details-10}}
+
+This scenario considers inhalation exposure from the use of aerosol
+products. Typical examples include hairspray and spray-on mosquito
+repellent. The function produces a \texttt{prevalence} value, which
+reflects the fraction of the population who use this scenario at all. It
+also produces a \texttt{frequency} value, which is the mean number of
+times per year this scenario occurs among that fraction of the
+population specified by prevalence. Since SHEDS operates on the basis of
+one random day, the \texttt{frequency} is divided by 365 and then passed
+to the \texttt{{[}p.round{]}(p.round)} (probabilistic rounding)
+function, which rounds either up or down to the nearest integer. Very
+common events may happen more than once in a day. The function also
+produces a \texttt{mass} variable, which refers to the mass of the
+product in grams in a typical usage event. The \texttt{composition} is
+the percentage of that mass that is the chemical in question.
+\texttt{frac.aer} is the fraction of the product mass that becomes
+aerosolized, and the \texttt{volume} affected by the use is approximated
+to allow the calculation of a concentration or density. Defaults are set
+in the code if these variables are missing from the input file. Exposure
+for the inhalation pathway has units of micrograms per cubic meter,
+reflecting the average air concentration of the chemical. An
+\texttt{airconc} variable is defined using \texttt{mass},
+\texttt{composition}, \texttt{frac.aer}, and \texttt{volume}. Since
+exposure depends on the time-averaged concentration, a duration is
+necessary. For example, if one spends five minutes in an aerosol cloud
+and the rest of the day in clean air, the daily exposure is the cloud
+concentration multiplied by 5/1440 (where 1440 is the number of minutes
+in a day). This function also calculates the inhaled dose, in units of
+micrograms per day. The dose equals the product of \texttt{exposure}
+(g/m3), basal ventilation rate, \texttt{bvr} (m3/day), the METS factor
+of 1.75 (typically people inhale air at an average of 1.75 times the
+basal rate to support common daily activities), and a conversion factor
+of 1E+06 from grams to micrograms.
+
+\hypertarget{author-11}{%
+\subsection{Author}\label{author-11}}
+
+Kristin Isaacs, Graham Glen keyword\textasciitilde SHEDS
+
+\hypertarget{value-11}{%
+\subsection{Value}\label{value-11}}
+
+dir.inh.aer The calculated quantity of chemical inhalation from
+aerosols, like hairspray and similar products, that are directly
+injected into the air on or around each exposed person.
+
+\hypertarget{dir.inhal.vap-dir.inhal.vap}{%
+\section{\texorpdfstring{\texttt{dir.inhal.vap}:
+dir.inhal.vap}{dir.inhal.vap: dir.inhal.vap}}\label{dir.inhal.vap-dir.inhal.vap}}
+
+\hypertarget{description-16}{%
+\subsection{Description}\label{description-16}}
+
+Models the inhalation exposure from the vapors of volatile chemicals for
+each theoretical person.
+
+\hypertarget{usage-16}{%
+\subsection{Usage}\label{usage-16}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dir.inhal.vap}\NormalTok{(sd, cd, cprops, cb, io)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-13}{%
+\subsection{Arguments}\label{arguments-13}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{sd}: The chemical-scenario data specific to relevant
+  combinations of chemical and scenario. Generated internally.
+\item
+  \texttt{cd}: The list of scenario-specific information for the
+  chemicals being evaluated. Generated internally.
+\item
+  \texttt{cprops}: The chemical properties required for SHEDS-HT. The
+  default file (the
+  \texttt{{[}Chem\_props\ file{]}(Chem\_props\%20file)} read in by the
+  \texttt{{[}read.chem.props{]}(read.chem.props)} function and modified
+  before input into the current function) was prepared from publicly
+  available databases using a custom program (not part of SHEDS-HT). The
+  default file contains 7 numerical inputs per chemical, and the
+  required properties are molecular weight (\texttt{MW}), vapor pressure
+  (\texttt{VP.Pa}), solubility (\texttt{water.sol.mg.l}), octanol-water
+  partition coefficient (\texttt{log.Kow}), air decay rate
+  (\texttt{half.air.hr}), decay rate on surfaces
+  (\texttt{half.sediment.hr}), and permeability coefficient
+  (\texttt{Kp}).
+\item
+  \texttt{cb}: A copy of the \texttt{base} data set output from the
+  \texttt{{[}make.cbase{]}(make.cbase)} function, with columns added for
+  exposure variables.
+\item
+  \texttt{io}: A binary variable indicating whether the volume of the
+  aerosol is used to approximate the affected volume.
+\end{itemize}
+
+\hypertarget{details-11}{%
+\subsection{Details}\label{details-11}}
+
+This scenario considers inhalation exposure from vapors (not aerosols).
+For example, painting will result in the inhalation of vapor, but it
+does not involve aerosols (unless it is spray paint). For this scenario,
+the vapor pressure and the molecular weight are relevant variables for
+determining exposure. These variables are included in the input to the
+\texttt{cprops} argument, which is drawn internally from the
+\texttt{{[}Chem\_props{]}(Chem\_props)} file. The function produces a
+\texttt{prevalence} value, which reflects the fraction of the population
+who use this scenario at all. It also produces a \texttt{frequency}
+value, which is the mean number of times per year this scenario occurs
+among that fraction of the population specified by \texttt{prevalence}.
+Since SHEDS operates on the basis of one random day, the
+\texttt{frequency} is divided by 365 and then passed to the
+\texttt{{[}p.round{]}(p.round)} (probabilistic rounding) function, which
+rounds either up or down to the nearest integer. Very common events may
+happen more than once in a day. The function also produces a
+\texttt{mass} variable, which refers to the mass of the product in grams
+in a typical usage event. The \texttt{composition} is the percentage of
+that mass that is the chemical in question. The \texttt{evap} variable
+is an effective evaporated mass, calculated using the \texttt{mass},
+\texttt{composition} (converted from percent to a fraction), the vapor
+pressure as a surrogate for partial pressure, and \texttt{duration} of
+product use. The \texttt{duration} term is made unitless by dividing by
+5 (minutes), which is an assumed time constant. The effective air
+concentation \texttt{airconc} is calculated as
+\texttt{evap}/\texttt{volume}. The value for \texttt{airconce}is capped
+by \texttt{maxconc}, which represents the point at which evaporation
+ceases. For chemicals used for a short duration, or with low vapor
+presssure, \texttt{maxconc} might not be reached before usage stops.
+Once \texttt{airconc} is established, the function also calculates the
+inhaled dose, in units of micrograms per day. The dose equals the
+product of \texttt{exposure} (g/m3), basal ventilation rate,
+\texttt{bvr} (m3/day), the METS factor of 1.75 (typically people inhale
+air at an average of 1.75 times the basal rate to support common daily
+activities), and a conversion factor of 1E6 from grams to micrograms.
+
+\hypertarget{author-12}{%
+\subsection{Author}\label{author-12}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-9}{%
+\subsection{Seealso}\label{seealso-9}}
+
+\texttt{{[}run{]}(run)}, \texttt{{[}p.round{]}(p.round)},
+\texttt{{[}read.chem.props{]}(read.chem.props)},
+\texttt{{[}Chem\_props{]}(Chem\_props)}
+
+\hypertarget{distrib-distrib}{%
+\section{\texorpdfstring{\texttt{distrib}:
+distrib}{distrib: distrib}}\label{distrib-distrib}}
+
+\hypertarget{description-17}{%
+\subsection{Description}\label{description-17}}
+
+produces random samples from distributuions
+
+\hypertarget{usage-17}{%
+\subsection{Usage}\label{usage-17}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{distrib}\NormalTok{(}
+  \AttributeTok{shape =} \StringTok{""}\NormalTok{,}
+  \AttributeTok{par1 =} \ConstantTok{NA}\NormalTok{,}
+  \AttributeTok{par2 =} \ConstantTok{NA}\NormalTok{,}
+  \AttributeTok{par3 =} \ConstantTok{NA}\NormalTok{,}
+  \AttributeTok{par4 =} \ConstantTok{NA}\NormalTok{,}
+  \AttributeTok{lt =} \ConstantTok{NA}\NormalTok{,}
+  \AttributeTok{ut =} \ConstantTok{NA}\NormalTok{,}
+  \AttributeTok{resamp =} \StringTok{"y"}\NormalTok{,}
+  \AttributeTok{n =} \DecValTok{1}\NormalTok{,}
+  \AttributeTok{q =} \ConstantTok{NA}\NormalTok{,}
+  \AttributeTok{p =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{),}
+  \AttributeTok{v =} \StringTok{""}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-14}{%
+\subsection{Arguments}\label{arguments-14}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{shape}: Required with no default. The permited inputs are
+  Bernoulli, binomial, beta, discrete, empirical, exponential, gamma,
+  lognormal, normal, point, probability, triangle, uniform, and Weibull.
+\item
+  \texttt{par1}: optional value requared for some shapes. Defulat = none
+\item
+  \texttt{par2}: optional value requared for some shapes. Defulat = none
+\item
+  \texttt{par3}: optional value requared for some shapes. Defulat = none
+\item
+  \texttt{par4}: optional value requared for some shapes. Defulat = none
+\item
+  \texttt{resamp}: optional value requared for some shapes. Defulat =
+  `y'
+\item
+  \texttt{n}: Optional Default = 1
+\item
+  \texttt{q}: Optional Default = none
+\item
+  \texttt{p}: Optional Default = c(1)
+\item
+  \texttt{v}: Optional Default = none
+\item
+  \texttt{It}: optional value requared for some shapes. Defulat = none
+\item
+  \texttt{Ut}: optional value requared for some shapes. Defulat = none
+\end{itemize}
+
+\hypertarget{details-12}{%
+\subsection{Details}\label{details-12}}
+
+This process is central to SHEDS because it is a stochastic model. The
+``shape'' is the essential argument, with others being required for
+certain shapes. For all shapes, one of ``n'' or ``q'' must be specified.
+If ``n'' is given, then Distrib returns a vector of ``n'' independent
+random samples from the specified distribution. If ``q'' is given, it
+must be a vector of numeric values, each between zero and one. These are
+interpreted as the quantiles of the distribution to be returned. When
+``q'' is given, Distrib does not generate any random values, it just
+evaluates the requested quantiles. The empirical shape requires argument
+``v'' as a list of possible values to be returned, each with equal
+probability. The other shapes require one or more of par1-par4 to be
+specified. See the SHEDS Technical Manual for more details on the
+meanings of par1-par4, which vary by shape. ``Lower.trun'' is the lower
+truncation point, meaning the smallest value that can be returned.
+Similarly, ``upper.trun'' is the largest value that may be returned. Not
+all distributions use lower.trun and/or upper.trun, but they should be
+specified for unbounded shapes like the Normal distribution. ``Resamp''
+is a flag to indicate the resolution for generated values outside the
+truncation limits. If resamp=``yes'' then effectively new values are
+generated until they are within the limits. If resamp=``no'', values
+outside the limits are moved to those limits. ``P'' is a list of
+probabilities that are used only with the ``discrete'' or
+``probability'' shapes. The ``p'' values are essentially weights for a
+list of discrete values that may be returned. The ``empirical''
+distribution also returns discrete values, but assigns them equal
+weights, so then ``p'' is not needed.
+
+\hypertarget{author-13}{%
+\subsection{Author}\label{author-13}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{value-12}{%
+\subsection{Value}\label{value-12}}
+
+A vector of ``n'' values from one distribution, where ``n'' is either
+the input argument (if given), or the length of the input vector ``q''.
+
+\hypertarget{down.the.drain.mass-down.the.drain.mass}{%
+\section{\texorpdfstring{\texttt{down.the.drain.mass}:
+down.the.drain.mass}{down.the.drain.mass: down.the.drain.mass}}\label{down.the.drain.mass-down.the.drain.mass}}
+
+\hypertarget{description-18}{%
+\subsection{Description}\label{description-18}}
+
+Models the quantity of chemical entering the waste water system on a per
+person-day basis.
+
+\hypertarget{usage-18}{%
+\subsection{Usage}\label{usage-18}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{down.the.drain.mass}\NormalTok{(sd, cd)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-15}{%
+\subsection{Arguments}\label{arguments-15}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{sd}: The chemical-scenario data specific to relevant
+  combinations of chemical and scenario. Generated internally.
+\item
+  \texttt{cd}: The list of scenario-specific information for the
+  chemicals being evaluated. Generated internally.
+\end{itemize}
+
+\hypertarget{details-13}{%
+\subsection{Details}\label{details-13}}
+
+This function models the simplest of all the current scenarios. It
+evaluates the amount of chemical entering the waste water system, on a
+per person-day basis. The ``exposure'' is to a system, not a person, but
+this method uses one person's actions to estimate their contribution to
+the total. The function produces a \texttt{prevalence} value, which
+reflects the fraction of the population who use this scenario at all. It
+also produces a \texttt{frequency} value, which is the mean number of
+times per year this scenario occurs among that fraction of the
+population specified by prevalence. Since SHEDS operates on the basis of
+one random day, the \texttt{frequency} is divided by 365 and then passed
+to the \texttt{{[}p.round{]}(p.round)} (probabilistic rounding)
+function, which rounds either up or down to the nearest integer. Very
+common events may happen more than once in a day. The function also
+produces a \texttt{mass} variable, which refers to the mass of the
+product in grams in a typical usage event. The \texttt{composition} is
+the percentage of that mass that is the chemical in question. The final
+output, \texttt{exp.ddd.mass}, is the product of the
+\texttt{prevalence}, \texttt{frequency}, \texttt{mass},
+\texttt{composition}, and the fraction going down the drain
+(\texttt{f.drain}, a variable in the \texttt{sd} input). The result is
+in grams per person-day.
+
+\hypertarget{author-14}{%
+\subsection{Author}\label{author-14}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-10}{%
+\subsection{Seealso}\label{seealso-10}}
+
+\texttt{{[}run{]}(run)}, \texttt{{[}p.round{]}(p.round)}
+
+\hypertarget{value-13}{%
+\subsection{Value}\label{value-13}}
+
+exp.ddd.mass The calculated quantity of chemical going down the drain
+(i.e., from laundry detergent) and entering the sewer system per person
+per day.
+
+\hypertarget{eval.factors-eval.factors}{%
+\section{\texorpdfstring{\texttt{eval.factors}:
+eval.factors}{eval.factors: eval.factors}}\label{eval.factors-eval.factors}}
+
+\hypertarget{description-19}{%
+\subsection{Description}\label{description-19}}
+
+Assigns distributions for each relevant exposure factor for each
+theoretical persons to be modeled in SHEDS.HT.
+
+\hypertarget{usage-19}{%
+\subsection{Usage}\label{usage-19}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{eval.factors}\NormalTok{(r, q, ef)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-16}{%
+\subsection{Arguments}\label{arguments-16}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{r}: Vector of row numbers, equivalent to the number of
+  theoretical people in the model sample. This input is created
+  internally by the \texttt{{[}add.factors{]}(add.factors)} function.
+\item
+  \texttt{q}: User-specified list of desired quantiles to be included in
+  the output.
+\item
+  \texttt{ef}: Distributional parameters for the exposure factors; an
+  output of the \texttt{{[}exp.factors{]}(exp.factors)} function and an
+  input argument to the \texttt{{[}add.factors{]}(add.factors)} function
+\end{itemize}
+
+\hypertarget{author-15}{%
+\subsection{Author}\label{author-15}}
+
+Krisin Isaacs, Graham Glen
+
+\hypertarget{seealso-11}{%
+\subsection{Seealso}\label{seealso-11}}
+
+\texttt{{[}add.factors{]}(add.factors)},
+\texttt{{[}exp.factors{]}(exp.factors)}
+
+\hypertarget{value-14}{%
+\subsection{Value}\label{value-14}}
+
+z A data frame specifying the form of the distribution and relevant
+parameters for each combination of exposure factor and individual
+person. The parameters include:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{form}: The form of the distribution for each exposure factor
+  (i.e., point, triangle).
+\item
+  \texttt{par1-par4}: The parameters associated with the distributional
+  form specified in form.
+\item
+  \texttt{lower.trun}: the lower limit of values to be included in the
+  distribution.
+\item
+  \texttt{upper.trun}: The upper limit of values to be included in the
+  distribution.
+\item
+  \texttt{resamp}: Logical field where: yes=resample, no=stack at
+  truncation bounds.
+\item
+  \texttt{q}: The quantiles of the distribution corresponding to those
+  specified by the user in the \texttt{q} input.
+\item
+  \texttt{p}: The probabilities associated with the quantiles.
+\item
+  \texttt{v}: The values associated with the quantiles.
+\end{itemize}
+
+\hypertarget{exportdatatables-a-function-used-to-export-.rda-files-distributed-with-shedsht-package}{%
+\section{\texorpdfstring{\texttt{ExportDataTables}: A function used to
+export .rda files distributed with ShedsHT
+package}{ExportDataTables: A function used to export .rda files distributed with ShedsHT package}}\label{exportdatatables-a-function-used-to-export-.rda-files-distributed-with-shedsht-package}}
+
+\hypertarget{description-20}{%
+\subsection{Description}\label{description-20}}
+
+This is a utility function used to export consumer product data sets
+into CSV format.
+
+\hypertarget{usage-20}{%
+\subsection{Usage}\label{usage-20}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ExportDataTables}\NormalTok{(}
+\NormalTok{  data\_set\_name,}
+\NormalTok{  output\_pth,}
+\NormalTok{  output\_fname,}
+  \AttributeTok{quote\_opt =} \ConstantTok{TRUE}\NormalTok{,}
+  \AttributeTok{na\_opt =} \StringTok{""}\NormalTok{,}
+  \AttributeTok{row\_names\_opt =} \ConstantTok{FALSE}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-17}{%
+\subsection{Arguments}\label{arguments-17}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{data\_set\_name}: A string type parameter, represents name of
+  an ``.rda'' data set.
+\item
+  \texttt{output\_pth}: A string type parameter, represents location to
+  store exported CSV file.
+\item
+  \texttt{output\_fname}: A string type parameter, represents name of
+  the exported CSV file.
+\item
+  \texttt{quote\_opt}: A string type parameter, represents a logical
+  argument for if any character or factor columns should be surrounded
+  by double quotes or not.
+\item
+  \texttt{na\_opt}: A string type parameter, the string to use for
+  missing values in the data.
+\item
+  \texttt{row\_names\_opt}: A string type parameter, either a logical
+  value indicating whether the row names of x are to be written along
+  with x, or a character vector of row names to be written.
+\end{itemize}
+
+\hypertarget{value-15}{%
+\subsection{Value}\label{value-15}}
+
+No variable will be returned. Instead, the function will save the data
+object into the file of choice.
+
+\hypertarget{filter_sources-filter_sources}{%
+\section{\texorpdfstring{\texttt{filter\_sources}:
+filter\_sources}{filter\_sources: filter\_sources}}\label{filter_sources-filter_sources}}
+
+\hypertarget{description-21}{%
+\subsection{Description}\label{description-21}}
+
+This function is used to select a subset of sources from another
+``source'' file.
+
+\hypertarget{usage-21}{%
+\subsection{Usage}\label{usage-21}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{filter\_sources}\NormalTok{(}
+  \AttributeTok{in.file =} \StringTok{"source\_scen\_prods.csv"}\NormalTok{,}
+  \AttributeTok{out.file =} \StringTok{"source\_scen\_subset.csv"}\NormalTok{,}
+  \AttributeTok{ids =} \FunctionTok{c}\NormalTok{(}\StringTok{"ALL"}\NormalTok{),}
+  \AttributeTok{types =} \FunctionTok{c}\NormalTok{(}\StringTok{"ALL"}\NormalTok{)}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-18}{%
+\subsection{Arguments}\label{arguments-18}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{In.file}: a csv file that contains expsoure info default =
+  ``source\_scen\_prods.csv''
+\item
+  \texttt{Out.file}: default = ``source\_scen\_prods.csv''
+\item
+  \texttt{IDS}: default = ``ALL''
+\item
+  \texttt{Types}: default = ``ALL''
+\end{itemize}
+
+\hypertarget{details-14}{%
+\subsection{Details}\label{details-14}}
+
+This function is used to select a subset of sources from another
+``source'' file. This is achieved by specifying either a list of the
+desired source ids, or one or more sources types. The allowed types are
+``A'' for articles, ``F'' for foods, or ``P'' for products. Use the c()
+function to list more than one item (e.g.~types=c(``F'',``P'') for foods
+and products). Any of the three types of source files (that is,
+source\_scen, source\_chem, or source\_vars) may be used. Specifying
+specific sources is achieved using the ``ids'' argument. This may
+require examining the in.file beforehand, to obtain the correct
+source.id values for the desired sources.
+
+\hypertarget{value-16}{%
+\subsection{Value}\label{value-16}}
+
+A .csv file of the same type as in.file, with the same variables and
+data, but fewer rows. The selected rows have source.type matching one of
+the elements in the ``types'' argument, and also have source.id matching
+one of the elements of the ``ids'' argument. If either argument is
+missing, then all sources automatically match it. Filter\_sources also
+returns an R object containing the same data as the output .csv file.
+
+\hypertarget{food.migration-food.migration}{%
+\section{\texorpdfstring{\texttt{food.migration}:
+food.migration}{food.migration: food.migration}}\label{food.migration-food.migration}}
+
+\hypertarget{description-22}{%
+\subsection{Description}\label{description-22}}
+
+Calculates chemical exposure from migration of chemicals from packaging
+or other contact materials into food (which is then consumed). This is
+added to the \texttt{dietary} output calculated by the
+\texttt{{[}food.residue{]}(food.residue)} function to establish a total
+exposure from the dietary pathway.
+
+\hypertarget{usage-22}{%
+\subsection{Usage}\label{usage-22}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{food.migration}\NormalTok{(cdata, sdata, cb, ftype)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-19}{%
+\subsection{Arguments}\label{arguments-19}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{cdata}: The list of scenario-specific information for the
+  chemicals being evaluated. Generated internally.
+\item
+  \texttt{sdata}: The chemical-scenario data specific to relevant
+  combinations of chemical and scenario. Generated internally.
+\item
+  \texttt{cb}: A copy of the \texttt{base} data set output from the
+  \texttt{{[}make.cbase{]}(make.cbase)} function, with columns added for
+  exposure variables.
+\item
+  \texttt{ftype}: Food consumption database which stores data on
+  consumption in grams per day of each food type for each person being
+  modeled. Generated internally from the
+  \texttt{{[}Diet\_diaries{]}(Diet\_diaries)} data set.
+\end{itemize}
+
+\hypertarget{details-15}{%
+\subsection{Details}\label{details-15}}
+
+If migration data is stored in the \texttt{cdata} argument, this is
+added to the total exposure calculated in the
+\texttt{{[}food.residue{]}(food.residue)} function.
+
+\hypertarget{author-16}{%
+\subsection{Author}\label{author-16}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-12}{%
+\subsection{Seealso}\label{seealso-12}}
+
+\texttt{{[}Diet\_diaries{]}(Diet\_diaries)}, \texttt{{[}run{]}(run)},
+\texttt{{[}p.round{]}(p.round)}, \texttt{{[}make.cbase{]}(make.cbase)},
+\texttt{{[}food.residue{]}(food.residue)}
+
+\hypertarget{value-17}{%
+\subsection{Value}\label{value-17}}
+
+dietary The calculated quantity of chemical exposure from food residue
+and migration of chemicals into food from packaging and other contact
+materials in grams per person per day.
+
+\hypertarget{food.residue-food.residue}{%
+\section{\texorpdfstring{\texttt{food.residue}:
+food.residue}{food.residue: food.residue}}\label{food.residue-food.residue}}
+
+\hypertarget{description-23}{%
+\subsection{Description}\label{description-23}}
+
+Models exposure to chemicals from consumption of food containing a known
+chemical residue for each theoretical person.
+
+\hypertarget{usage-23}{%
+\subsection{Usage}\label{usage-23}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{food.residue}\NormalTok{(cdata, cb, ftype)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-20}{%
+\subsection{Arguments}\label{arguments-20}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{cdata}: The list of scenario-specific information for the
+  chemicals being evaluated. Generated internally.
+\item
+  \texttt{cb}: Output of the \texttt{{[}make.cbase{]}(make.cbase)}
+  function.
+\item
+  \texttt{ftype}: Food consumption database which stores data on
+  consumption in grams per day of each food type for each person being
+  modeled. Generated internally from the
+  \texttt{{[}Diet\_diaries{]}(Diet\_diaries)} data set.
+\end{itemize}
+
+\hypertarget{details-16}{%
+\subsection{Details}\label{details-16}}
+
+In this function, the variable \texttt{foods} is defined as a list of
+the names of the food groups, which are stored in both the
+\texttt{ftype} and \texttt{cb} arguments. The FOR loop picks the name of
+each food group as a string, and converts it to a variable name. For
+example, the food group ``FV'' may have corresponding variables
+\texttt{residue.FV}, \texttt{zeros.FV} (number of nondetects), and
+\texttt{nonzeros.FV} (number of detects) on the \texttt{cb}data set. If
+these variables are not present, no exposure results. The variables may
+be present, but an individual person may still receive zero exposure
+because not all samples of that food are contaminated, as indicated by
+the \texttt{zeros.FV} value. The \texttt{nonzeros.FV} value is used to
+determine the likelihood of contamination, with the residue variable
+determining the amount found (when it is nonzero). The dietary exposure
+is the product of the \texttt{consumption} as reported in the
+\texttt{ftypes} input (in grams) and the \texttt{residue.FV} (in
+micrograms of chemical per gram of food), summed over all food groups.
+Three other vectors are returned (corresponding to dermal exposure,
+inhalation exposure, and inhalation dose), but these are currently set
+to zero for the dietary pathway. In principle, eating food could result
+in dermal exposure (for finger foods), or inhalation (as foods may have
+noticeable odors), but such exposures are not large enough to be of
+concern at present.
+
+\hypertarget{author-17}{%
+\subsection{Author}\label{author-17}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-13}{%
+\subsection{Seealso}\label{seealso-13}}
+
+\texttt{{[}Diet\_diaries{]}(Diet\_diaries)}, \texttt{{[}run{]}(run)},
+\texttt{{[}p.round{]}(p.round)},
+\texttt{{[}generate.person.vars{]}(generate.person.vars)},
+\texttt{{[}food.migration{]}(food.migration)}
+
+\hypertarget{value-18}{%
+\subsection{Value}\label{value-18}}
+
+dietary The calculated quantity of chemical exposure from food residue
+in grams per person per day.
+
+\hypertarget{gen.factor.tables-gen.factor.tables}{%
+\section{\texorpdfstring{\texttt{gen.factor.tables}:
+gen.factor.tables}{gen.factor.tables: gen.factor.tables}}\label{gen.factor.tables-gen.factor.tables}}
+
+\hypertarget{description-24}{%
+\subsection{Description}\label{description-24}}
+
+Constructs tables of non-media specific exposure factors for each
+relevant combination of age, gender, and season. The input is from the
+\texttt{{[}Exp\_actors{]}(Exp\_actors)} file (specified on the
+\texttt{{[}Run{]}(Run)} file) after being read through the
+\texttt{{[}read.exp.factors{]}(read.exp.factors)} function.
+
+\hypertarget{usage-24}{%
+\subsection{Usage}\label{usage-24}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{gen.factor.tables}\NormalTok{(}\AttributeTok{ef =}\NormalTok{ exp.factors)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-21}{%
+\subsection{Arguments}\label{arguments-21}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{ef}: A data set created internally using the
+  \texttt{{[}run{]}(run)} function and the
+  \texttt{{[}read.exp.factors{]}(read.exp.factors)} function to import
+  the user specified \texttt{{[}Exp\_factors{]}(Exp\_factors)} input
+  file. The data set contains the distributional parameters for the
+  exposure factors. All of these variables may have age or
+  gender-dependent distributions, although in the absence of data, many
+  are assigned a single distribution from which all persons are sampled.
+\end{itemize}
+
+\hypertarget{author-18}{%
+\subsection{Author}\label{author-18}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-14}{%
+\subsection{Seealso}\label{seealso-14}}
+
+\texttt{{[}Exp\_factors{]}(Exp\_factors)}, \texttt{{[}Run{]}(Run)},
+\texttt{{[}run{]}(run)},
+\texttt{{[}read.exp.factors{]}(read.exp.factors)}
+
+\hypertarget{value-19}{%
+\subsection{Value}\label{value-19}}
+
+exp.gen Output consists of non-media specific exposure factors as a data
+table. Depending on the user input, these generated exposure factors may
+be gender and/or season specific. Each gender-season combination is
+assigned a row number pointing to the appropriate distribution on the
+output dataset from the
+\texttt{{[}read.exp.factors{]}(read.exp.factors)} function. Thus,
+\texttt{exp.gen} consists of 8 rows per variable (2 genders x 4
+seasons), regardless of the number of different distributions used for
+that variable. In addition, if the function runs successfully, the
+following message is printed: ``General Factor Tables completed''
+
+\hypertarget{get.fug.concs-get.fug.concs}{%
+\section{\texorpdfstring{\texttt{get.fug.concs}:
+get.fug.concs}{get.fug.concs: get.fug.concs}}\label{get.fug.concs-get.fug.concs}}
+
+\hypertarget{description-25}{%
+\subsection{Description}\label{description-25}}
+
+Performs fugacity calculations to evaluate time-dependent chemical
+flows.
+
+\hypertarget{usage-25}{%
+\subsection{Usage}\label{usage-25}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{get.fug.concs}\NormalTok{(sdata, chem.data, x, cfug)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-22}{%
+\subsection{Arguments}\label{arguments-22}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{sdata}: The chemical-scenario data specific to relevant
+  combinations of chemical and scenario. Generated internally.
+\item
+  \texttt{chem.data}: The list of scenario-specific information for the
+  chemicals being evaluated. Generated internally.
+\item
+  \texttt{x}: The output of the \texttt{{[}add.fugs{]}(add.fugs)}
+  function.
+\item
+  \texttt{cfug}: The output of the \texttt{{[}chem\_fug{]}(chem\_fug)}
+  function, a data set with the chemical specific parameters for each
+  combination of chemical and simulated person. For each chemical, the
+  chemical specific parameters assigned to a given person are randomly
+  sampled from distributions on those parameters. These distributions
+  are created from point estimates to reflect real-world uncertainty and
+  variability.
+\end{itemize}
+
+\hypertarget{keyword-2}{%
+\subsection{Keyword}\label{keyword-2}}
+
+SHEDS
+
+\hypertarget{keyword-3}{%
+\subsection{Keyword}\label{keyword-3}}
+
+kwd2
+
+\hypertarget{details-17}{%
+\subsection{Details}\label{details-17}}
+
+This is one of two functions that perform fugacity calculations. This
+one evaluates dynamic or time-dependent chemical First, a set of local
+variables are determined for use in later calculations. These are a mix
+of fixed and chemical-dependent variables (evaluated separately for each
+person). Some variables, like chemical mass and app.rates, vary with
+each source, so these calculations are repeated for each
+source-scenario. Second, the eigenvalues and eigenvectors of the
+jacobian matrix are calculated. Since the fugacity model has been
+reduced to just two compartments (air and surface), the solutions can be
+expressed analytically, and there is no explicit invocation of any
+linear algebra routines that would normally be required. Third, the
+variables composing the \texttt{concs} output are evaluated. The
+variables \texttt{m.c.air} and \texttt{m.c.sur}are the time-constant
+masses, while \texttt{m.t0.air} and \texttt{m.t0.sur} are the
+time-dependent masses at t=0. The time-constant parts are zero here
+because the permanent sources (i.e.~\texttt{c.src.air} and
+\texttt{c.src.sur}) are assumed to be zero in these calculations. The
+time-dependent masses are multiplied exponentially as a function of
+time, and thus approach zero when enough time has passed.
+
+\hypertarget{author-19}{%
+\subsection{Author}\label{author-19}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-15}{%
+\subsection{Seealso}\label{seealso-15}}
+
+\texttt{{[}chem\_fugs{]}(chem\_fugs)},
+\texttt{{[}Fugacity{]}(Fugacity)}, \texttt{{[}Run{]}(Run)},
+\texttt{{[}run{]}(run)}, \texttt{{[}get.y0.concs{]}(get.y0.concs)}
+
+\hypertarget{value-20}{%
+\subsection{Value}\label{value-20}}
+
+concs A data set containing calculated dynamic chemical flows for each
+unique combination of simulated person and chemical.
+
+\hypertarget{get.y0.concs-get.y0.concs}{%
+\section{\texorpdfstring{\texttt{get.y0.concs}:
+get.y0.concs}{get.y0.concs: get.y0.concs}}\label{get.y0.concs-get.y0.concs}}
+
+\hypertarget{description-26}{%
+\subsection{Description}\label{description-26}}
+
+Performs fugacity calculations to evaluate constant (time-independent)
+chemical flows, such as emissions from household articles.
+
+\hypertarget{usage-26}{%
+\subsection{Usage}\label{usage-26}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{get.y0.concs}\NormalTok{(sdata, chem.data, pdmff, cfug)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-23}{%
+\subsection{Arguments}\label{arguments-23}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{sdata}: The chemical-scenario data specific to relevant
+  combinations of chemical and scenario. Generated internally.
+\item
+  \texttt{chem.data}: The list of scenario-specific information for the
+  chemicals being evaluated. Generated internally.
+\item
+  \texttt{pdmff}: Output from the \texttt{{[}add.fugs{]}(add.fugs)}
+  function. A data set containing values sampled from the distributions
+  of each relevant variable in the \texttt{{[}Fugacity{]}(Fugacity)}
+  input file for each theoretical person.
+\item
+  \texttt{cfug}: The output of the \texttt{{[}chem\_fug{]}(chem\_fug)}
+  function, a data set with the chemical specific parameters for each
+  combination of chemical and simulated person. For each chemical, the
+  chemical specific parameters assigned to a given person are randomly
+  sampled from distributions on those parameters. These distributions
+  are created from point estimates to reflect real-world uncertainty and
+  variability.
+\end{itemize}
+
+\hypertarget{keyword-4}{%
+\subsection{Keyword}\label{keyword-4}}
+
+SHEDS
+
+\hypertarget{keyword-5}{%
+\subsection{Keyword}\label{keyword-5}}
+
+kwd2
+
+\hypertarget{details-18}{%
+\subsection{Details}\label{details-18}}
+
+This function evaluates the chemical concentrations resulting from
+constant source emissions. Thus, the function employs the steady state
+solution to the fugacity equations. The basis for these calculations is
+that the chemical sources are from articles, and are thus permanent and
+unchanging. The chemical concentrations will therefore quickly adjust so
+that the flows are balanced, and the concentrations remain fixed
+thereafter.
+
+\hypertarget{author-20}{%
+\subsection{Author}\label{author-20}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-16}{%
+\subsection{Seealso}\label{seealso-16}}
+
+\texttt{{[}chem\_fugs{]}(chem\_fugs)},
+\texttt{{[}Fugacity{]}(Fugacity)}, \texttt{{[}Run{]}(Run)},
+\texttt{{[}run{]}(run)}, \texttt{{[}get.y0.concs{]}(get.y0.concs)}
+
+\hypertarget{value-21}{%
+\subsection{Value}\label{value-21}}
+
+concs A data set containing calculated steady state chemical flows for
+each unique combination of simulated person and chemical.
+
+\hypertarget{indir.exposure-indir.exposure}{%
+\section{\texorpdfstring{\texttt{indir.exposure}:
+indir.exposure}{indir.exposure: indir.exposure}}\label{indir.exposure-indir.exposure}}
+
+\hypertarget{description-27}{%
+\subsection{Description}\label{description-27}}
+
+Models the indirect exposure to chemicals in the home for each
+theoretical person.
+
+\hypertarget{usage-27}{%
+\subsection{Usage}\label{usage-27}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{indir.exposure}\NormalTok{(sd, cb, concs, chem.data)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-24}{%
+\subsection{Arguments}\label{arguments-24}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{sd}: The chemical-scenario data specific to relevant
+  combinations of chemical and scenario. Generated internally.
+\item
+  \texttt{cb}: A copy of the \texttt{base} data set output from the
+  \texttt{{[}make.cbase{]}(make.cbase)} function, with columns added for
+  exposure variables.
+\item
+  \texttt{concs}: The concentration of the chemical (in air and/or on
+  surfaces) being released into the environment. Outpu of the
+  \texttt{{[}get.fug.concs{]}(get.fug.concs)} function.
+\item
+  \texttt{chem.data}: The list of scenario-specific information for the
+  chemicals being evaluated. Generated internally.
+\end{itemize}
+
+\hypertarget{details-19}{%
+\subsection{Details}\label{details-19}}
+
+Indirect exposure happens after a product is no longer being used or
+applied, due to chemical lingering on various surfaces or in the air.
+People who come along later may receive dermal or inhalation exposure
+from residual chemical in the environment. SHEDS.HT currently has two
+indirect exposure scenarios. One which applies to a one-time chemical
+treatment applied to a house, and another which applies to continual
+releases from articles. Both scenarios consist of two parts: the first
+determines the appropriate air and surface concentrations. That code is
+in the \texttt{{[}Fugacity{]}(Fugacity)} module. The second part is the
+exposure calculation by the current function. Both types of indirect
+exposure scenarios call this function. The surface and air
+concentrations from the \texttt{{[}Fugacity{]}(Fugacity)} module are
+premised on the product use actually occurring. Hence,
+\texttt{{[}indir.exposure{]}(indir.exposure)} starts by multiplying
+those concentrations by the \texttt{prevalence} (which is either 0 or 1,
+evaluated separately for each person). For air, the exposure is the
+average daily concentration, which is the event concentration multiplied
+by the fraction of the day spent in that event. The inhaled dose is the
+product of the exposure, the basal ventilation rate, and the PAI factor
+(multiplier for the basal rate). A factor of 1E+06 converts the result
+from grams per day to micrograms per day. Dermal exposure results from
+skin contact with surfaces. The surface concentration (ug/cm2) is
+multiplied by the fraction available for transfer (\texttt{avail.f},
+unitless), the transfer coefficient (\texttt{dermal.tc}, in cm2/hr), and
+the contact \texttt{duration} (hr/day). The result is the amount of
+chemical transferred onto the skin (ug/day).
+
+\hypertarget{author-21}{%
+\subsection{Author}\label{author-21}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-17}{%
+\subsection{Seealso}\label{seealso-17}}
+
+\texttt{{[}Fugacity{]}(Fugacity)},
+\texttt{{[}get.fug.concs{]}(get.fug.concs)},
+\texttt{{[}make.cbase{]}(make.cbase)}, \texttt{{[}run{]}(run)}
+
+\hypertarget{value-22}{%
+\subsection{Value}\label{value-22}}
+
+indir Indirect exposure to chemicals in the home in ug per person per
+day.
+
+\hypertarget{make.cbase-make.cbase}{%
+\section{\texorpdfstring{\texttt{make.cbase}:
+make.cbase}{make.cbase: make.cbase}}\label{make.cbase-make.cbase}}
+
+\hypertarget{description-28}{%
+\subsection{Description}\label{description-28}}
+
+Extends the \texttt{base} data set, output from the
+\texttt{{[}generate.person.vars{]}(generate.person.vars)} function, to
+include a set of chemical-specific exposure variables. Currently, all
+new variables are initialized to zero.
+
+\hypertarget{usage-28}{%
+\subsection{Usage}\label{usage-28}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{make.cbase}\NormalTok{(base, chem)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-25}{%
+\subsection{Arguments}\label{arguments-25}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{base}: Data set of all chemical-independent information needed
+  for the exposure assessment. Each row corresponds to a simulated
+  person. The variables consist of age, gender, weight, diet and
+  activity diaries, food consumption, minutes in each micro, and the
+  evaluation of the exposure factors for that person.
+\item
+  \texttt{chem}: List of the chemical(s) of interest, determined via the
+  \texttt{chemical} input in the \texttt{{[}Run{]}(Run)} file. The
+  exposure variables for the specified chemicals will be appended to the
+  \texttt{base} data set.
+\end{itemize}
+
+\hypertarget{author-22}{%
+\subsection{Author}\label{author-22}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-18}{%
+\subsection{Seealso}\label{seealso-18}}
+
+\texttt{{[}Run{]}(Run)}, \texttt{{[}run{]}(run)}
+
+\hypertarget{value-23}{%
+\subsection{Value}\label{value-23}}
+
+The output is a data set cb consisting of the base data set, appended by
+the following columns:
+
+\begin{itemize}
+\tightlist
+\item
+  chemrep: The unique ID corresponding to each chemical specified in the
+  \texttt{chem} argument.
+\item
+  inhal.abs.f: For each person, the fraction of absorption of a given
+  chemical when inhaled.
+\item
+  urine.f: For each person, the fraction of intake of a given chemical
+  that is excreted through urine.
+\item
+  exp.inhal.tot: For each person, the total exposure of a given chemical
+  via the direct inhalation scenario.
+\item
+  dose.inhal.tot: For each person, the corresponding dose for total
+  exposure of a given chemical via the direct inhalation scenario.
+\item
+  exp.dermal.tot: For each person, the total exposure of a given
+  chemical via the direct dermal application scenario.
+\item
+  exp.ingest.tot: For each person, the total exposure of a given
+  chemical via the direct ingestion scenario.
+\item
+  exp.dietary.tot: For each person, the total exposure of a given
+  chemical via the dietary scenario.
+\item
+  exp.migrat.tot: For each person, the total exposure of a given
+  chemical via the migration scenario.
+\item
+  exp.nondiet.tot: For each person, the total exposure of a given
+  chemical via the non-dietary food exposure scenario.
+\item
+  exp.ddd.tot: For each person, the total exposure of a given chemical
+  via the down the drain scenario.
+\item
+  exp.window.tot: For each person, the total exposure of a given
+  chemical via the out the window scenario.
+\end{itemize}
+
+\hypertarget{med.factor.tables-med.factor.tables}{%
+\section{\texorpdfstring{\texttt{med.factor.tables}:
+med.factor.tables}{med.factor.tables: med.factor.tables}}\label{med.factor.tables-med.factor.tables}}
+
+\hypertarget{description-29}{%
+\subsection{Description}\label{description-29}}
+
+Constructs tables of media specific exposure factors for each relevant
+combination of age, gender, and season, and each of three media specific
+variables in the \texttt{ef} argument. These are avail.f, dermal.tc, and
+om.ratio.
+
+\hypertarget{usage-29}{%
+\subsection{Usage}\label{usage-29}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{med.factor.tables}\NormalTok{(ef, media.sur)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-26}{%
+\subsection{Arguments}\label{arguments-26}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{ef}: A data set created internally using the
+  \texttt{{[}run{]}(run)} function and the
+  \texttt{{[}read.exp.factors{]}(read.exp.factors)} function to import
+  the user specified \texttt{{[}Exp\_factors{]}(Exp\_factors)} input
+  file. The data set contains the distributional parameters for the
+  exposure factors. All of these variables may have age or
+  gender-dependent distributions, although in the absence of data, many
+  are assigned a single distribution from which all persons are sampled.
+\item
+  \texttt{media.sur}: A list of surface media. This data set is created
+  internally by sub-setting the \texttt{{[}Media{]}(Media)} input file
+  (read in with the \texttt{{[}read.media.file{]}(read.media.file)}
+  function within the \texttt{{[}run{]}(run)} function) to extract only
+  surface media.
+\end{itemize}
+
+\hypertarget{note-2}{%
+\subsection{Note}\label{note-2}}
+
+The first input argument to \texttt{med.factor.tables} (ef) is created
+by reading in the \texttt{{[}Exp\_factors{]}(Exp\_factors)}input file
+(specified on the \texttt{{[}Run{]}(Run)} file) with the
+\texttt{{[}read.exp.factors{]}(read.exp.factors)} function within the
+\texttt{{[}run{]}(run)} function. The \texttt{media.sur} input is
+created by sub-setting the \texttt{{[}Media{]}(Media)} input file (read
+in with the \texttt{{[}read.media.file{]}(read.media.file)} function
+within the \texttt{{[}run{]}(run)} function).
+
+\hypertarget{author-23}{%
+\subsection{Author}\label{author-23}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-19}{%
+\subsection{Seealso}\label{seealso-19}}
+
+\texttt{{[}Media{]}(Media)}, \texttt{{[}Exp\_factors{]}(Exp\_factors)},
+\texttt{{[}Run{]}(Run)}, \texttt{{[}run{]}(run)},
+\texttt{{[}read.exp.factors{]}(read.exp.factors)},
+\texttt{{[}read.media.file{]}(read.media.file)}
+
+\hypertarget{value-24}{%
+\subsection{Value}\label{value-24}}
+
+exp.med Media specific exposure factors presented as a data table. The
+present version of the model consists of only 3 such exposure factors,
+but the code will accept more. Depending on the user input, these
+generated exposure factors may be gender and/or season specific in
+addition to media specific. The output consists of 24 rows per variable
+(2 genders x 4 seasons x 3 media), when all ages share the same
+distribution. If a variable has N age categories (each with its own
+distribution) then there are (24 x N) rows for that variable. In
+addition, if the function runs successfully, the following message is
+printed: ``Media-specific Factor Tables completed''
+
+\hypertarget{p.round-p.round}{%
+\section{\texorpdfstring{\texttt{p.round}:
+p.round}{p.round: p.round}}\label{p.round-p.round}}
+
+\hypertarget{description-30}{%
+\subsection{Description}\label{description-30}}
+
+p.round performs stochastic or probabilistic rounding of non-integer
+values.
+
+\hypertarget{usage-30}{%
+\subsection{Usage}\label{usage-30}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{p.round}\NormalTok{(}\AttributeTok{x =} \ConstantTok{NULL}\NormalTok{, }\AttributeTok{q =} \ConstantTok{NA}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-27}{%
+\subsection{Arguments}\label{arguments-27}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{x}: Required Default = none
+\item
+  \texttt{q}: Optional Default = none
+\end{itemize}
+
+\hypertarget{details-20}{%
+\subsection{Details}\label{details-20}}
+
+The input ``x'' is a vector of values to be rounded. Each value of x is
+rounded independently, either up or down. The fractional value of x is
+used to determine weights for rounding in each direction. For example,
+if x=4.3, then it is rounded up to 5 with probability 0.3, else rounded
+down to 4 (with probability 0.7). The p.round function always returns
+integer values, and does not introduce bias. In the above example, if
+the argument were 4.3 a large number of times, then the returned values
+(all either 4 or 5) would average 4.3 with a small residual error which
+approaches zero as ``n'' gets large.
+
+\hypertarget{author-24}{%
+\subsection{Author}\label{author-24}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{value-25}{%
+\subsection{Value}\label{value-25}}
+
+A vector of the same length as the input ``x'', containing all integer
+values.
+
+\hypertarget{post.exposure-post.exposure}{%
+\section{\texorpdfstring{\texttt{post.exposure}:
+post.exposure}{post.exposure: post.exposure}}\label{post.exposure-post.exposure}}
+
+\hypertarget{description-31}{%
+\subsection{Description}\label{description-31}}
+
+Resolves the fate of chemical after initial exposure has occurred. This
+involves parsing out the amount of chemical removed and amount
+ultimately contributing to the exposure dose for each person.
+
+\hypertarget{usage-31}{%
+\subsection{Usage}\label{usage-31}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{post.exposure}\NormalTok{(cb, cprops)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-28}{%
+\subsection{Arguments}\label{arguments-28}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{cb}: A copy of the \texttt{base} data set output from the
+  \texttt{{[}make.cbase{]}(make.cbase)} function, with columns added for
+  exposure variables.
+\item
+  \texttt{cprops}: The chemical properties required for SHEDS-HT. The
+  default file (the
+  \texttt{{[}Chem\_props\ file{]}(Chem\_props\%20file)} read in by the
+  \texttt{{[}read.chem.props{]}(read.chem.props)} function and modified
+  before input into the current function) was prepared from publicly
+  available databases using a custom program (not part of SHEDS-HT). The
+  default file contains 7 numerical inputs per chemical, and the
+  required properties are molecular weight (\texttt{MW}), vapor pressure
+  (\texttt{VP.Pa}), solubility (\texttt{water.sol.mg.l}), octanol-water
+  partition coefficient (\texttt{log.Kow}), air decay rate
+  (\texttt{half.air.hr}), decay rate on surfaces
+  (\texttt{half.sediment.hr}), and permeability coefficient
+  (\texttt{Kp}).
+\end{itemize}
+
+\hypertarget{details-21}{%
+\subsection{Details}\label{details-21}}
+
+This function resolves the fate of chemical after initial exposure has
+occurred. The same function applies to all exposure scenarios. The
+dermal exposure is the most complicated, as there are five removal
+methods. All five are randomly sampled. While the sum of the five means
+is close to one, the sum of five random samples might not be, so these
+samples are treated as fractions of their sum. The \texttt{rem.bath}
+variable is either 0 or 1, so the bath removal term is either zero or
+the sampled bath removal efficiency. The \texttt{rem.brush} term is also
+simple. The handwashing (\texttt{rem.wash}) and hand-to-mouth
+(\texttt{rem.hmouth}) transfer terms are non-linear, because higher
+frequencies have less chemical available for removal on each repetition.
+The algorithms in place were fitted to output from SHEDS-Multimedia,
+which were summed to daily totals. The final removal term is dermal
+absorption (\texttt{rem.absorb}). The base value is multiplied by the
+\texttt{Kp} factor from the \texttt{cprops} argument, and divided by the
+value for permethrin, as the values from SHEDS-Multimedia were based on
+a permethrin run. The five terms are evaluated separately for each
+person, as is their sum. Each is then converted to a fraction of the
+whole. The fractions may be quite different from one person to another.
+For one, perhaps 80\% of the dermal loading is removed by a bath/shower,
+while for another person it is 0\% because they did not take one. For
+the latter person, other four removal terms are (on average) five times
+larger than for the former person, because together they account for
+100\% of the removal, instead of just 20\%. The rest of the
+\texttt{post.exposure} function is mostly a matter of bookkeeping. The
+hand-to-mouth dermal removal term becomes an ingestion exposure term.
+Summing exposures across routes is dubious, in part because inhalation
+exposures use different units from the others, and because much of the
+dermal exposure never enters the body. In addition, summing dermal and
+ingestion exposures may double-count the hand-to-mouth term. However,
+intake dose may be summed. In SHEDS, ``intake dose'' is the sum of the
+inhaled dose (which is the amount of chemical entering the lungs in
+ug/day), the ingestion exposure (which is the amount entering the GI
+tract in ug/day), and the dermal absorption (the amount penetrating into
+or through the skin, so it cannot otherwise be removed, in ug/day). The
+``absorbed dose'' is also calculated: for dermal it is the same as the
+intake dose, but for ingestion and inhalation there is another
+absorption factor, which was set on the exposure factors input file. An
+estimate of the chemical in urine (in ug/day) is made. Both the intake
+dose and the absorbed dose are reported in both (ug/day) and in
+(mg/kg/day). Note that the latter requires the body weights of each
+individual. These cannot be obtained from the former just by knowing the
+average body weight in SHEDS. The above variables for each simulated
+person are written to the \texttt{fexp} object (the name stands for
+``final exposure''). Each chemical writes over the previous
+\texttt{fexp}, so the data must first be summarized and written to an
+output file.
+
+\hypertarget{author-25}{%
+\subsection{Author}\label{author-25}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-20}{%
+\subsection{Seealso}\label{seealso-20}}
+
+\texttt{{[}make.cbase{]}(make.cbase)},
+\texttt{{[}Chemprops\_small{]}(Chemprops\_small)}
+
+\hypertarget{value-26}{%
+\subsection{Value}\label{value-26}}
+
+fexp Absorbed dose and intake dose of a given chemical for each
+theoretical person being modeled for all exposure scenarios.
+
+\hypertarget{puc.boxplot-puc.boxplot-is-a-ggplot-boxplot-of-one-or-multiple-srcmeans-variables.-the-y-axis-for-each-row-is-the-selected-output-variable-and-the-x-axis-is-higher-level-puc.}{%
+\section{\texorpdfstring{\texttt{puc.boxplot}: puc.boxplot is a ggplot
+boxplot of one or multiple srcMeans variables. The y-axis for each row
+is the selected output variable and the x-axis is higher-level
+PUC.}{puc.boxplot: puc.boxplot is a ggplot boxplot of one or multiple srcMeans variables. The y-axis for each row is the selected output variable and the x-axis is higher-level PUC.}}\label{puc.boxplot-puc.boxplot-is-a-ggplot-boxplot-of-one-or-multiple-srcmeans-variables.-the-y-axis-for-each-row-is-the-selected-output-variable-and-the-x-axis-is-higher-level-puc.}}
+
+User can select multiple different output variables using the argument
+output.variables. Data comes from srcMeans output file, so data points
+are mean output.variable. The user can plot multiple different pathways
+and each row of boxplots is a different variable
+
+\hypertarget{description-32}{%
+\subsection{Description}\label{description-32}}
+
+puc.boxplot is a ggplot boxplot of one or multiple srcMeans variables.
+The y-axis for each row is the selected output variable and the x-axis
+is higher-level PUC. User can select multiple different output variables
+using the argument output.variables. Data comes from srcMeans output
+file, so data points are mean output.variable. The user can plot
+multiple different pathways and each row of boxplots is a different
+variable
+
+\hypertarget{usage-32}{%
+\subsection{Usage}\label{usage-32}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{puc.boxplot}\NormalTok{(}
+\NormalTok{  run.name,}
+  \AttributeTok{output.variables =} \FunctionTok{c}\NormalTok{(}\StringTok{"exp.dermal"}\NormalTok{, }\StringTok{"exp.ingest"}\NormalTok{, }\StringTok{"exp.inhal"}\NormalTok{)}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-29}{%
+\subsection{Arguments}\label{arguments-29}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{run.name}: default = name of last run (in current R session)
+\item
+  \texttt{output.variables}: argument is a concatenated vector of
+  character strings. c(``exp.dermal'', ``exp.ingest'', ``exp.inhal'')
+\end{itemize}
+
+\hypertarget{details-22}{%
+\subsection{Details}\label{details-22}}
+
+A SHEDS run creates an output file for each chemical. This plot pulls
+from the srcMeans.csv for each chemical in the output file. The y axis
+is log transformed and a constant of 1e-10 added to y variable for log
+transformation of 0's.
+
+\hypertarget{value-27}{%
+\subsection{Value}\label{value-27}}
+
+a boxplot of output.variable vs higher level PUC
+
+\hypertarget{puc.rank.plot-puc.rank.plot-is-a-ggplot-scatter-plot-with-desired-srcmeans-variable-on-the-y-axis-and-chemical-rank-on-the-x-axis.}{%
+\section{\texorpdfstring{\texttt{puc.rank.plot}: puc.rank.plot is a
+ggplot scatter plot with desired srcMeans variable on the y axis and
+chemical rank on the x
+axis.}{puc.rank.plot: puc.rank.plot is a ggplot scatter plot with desired srcMeans variable on the y axis and chemical rank on the x axis.}}\label{puc.rank.plot-puc.rank.plot-is-a-ggplot-scatter-plot-with-desired-srcmeans-variable-on-the-y-axis-and-chemical-rank-on-the-x-axis.}}
+
+The dependent variable on the y axis can be changed using
+output.variable argument, but only one output variable can be plotted at
+a time. User can either plot the individual product or the higher level
+puc using the combine argument. Data comes from all\_srcMeans output
+file, so data points are the mean for that output varaible.
+
+\hypertarget{description-33}{%
+\subsection{Description}\label{description-33}}
+
+puc.rank.plot is a ggplot scatter plot with desired srcMeans variable on
+the y axis and chemical rank on the x axis. The dependent variable on
+the y axis can be changed using output.variable argument, but only one
+output variable can be plotted at a time. User can either plot the
+individual product or the higher level puc using the combine argument.
+Data comes from all\_srcMeans output file, so data points are the mean
+for that output varaible.
+
+\hypertarget{usage-33}{%
+\subsection{Usage}\label{usage-33}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{puc.rank.plot}\NormalTok{(run.name, }\AttributeTok{output.variable =} \StringTok{"exp.dermal"}\NormalTok{, }\AttributeTok{combine =} \ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-30}{%
+\subsection{Arguments}\label{arguments-30}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{run.name}: default = name of last run (in current R session)
+\item
+  \texttt{output.variable}: argument is a single character string.
+  default = ``exp.dermal''.
+\item
+  \texttt{combine}: true or false statement that dictates whether to
+  plot each product or combine them so that each data point is a higher
+  level product. default = FALSE
+\end{itemize}
+
+\hypertarget{details-23}{%
+\subsection{Details}\label{details-23}}
+
+A SHEDS run creates an output file for each chemical. This plot pulls
+from the srcMeans.csv for each chemical in the output file. Chemicals
+are ranked in ascending order of output.variable on the x axis. The y
+axis is log transformed and a constant of 1e-10 added to y variable for
+log transformation of 0's. The plot colors points by higher level PUC.
+
+\hypertarget{value-28}{%
+\subsection{Value}\label{value-28}}
+
+a plot of output.variable vs chemical rank with a legend for color and
+shape
+
+\hypertarget{quantiles-quantiles}{%
+\section{\texorpdfstring{\texttt{quantiles}:
+quantiles}{quantiles: quantiles}}\label{quantiles-quantiles}}
+
+\hypertarget{description-34}{%
+\subsection{Description}\label{description-34}}
+
+This function is similar to the built-in R function ``quantile'', but it
+returns a list of pre-selected quantiles of the set of values in the
+vector ``x''.
+
+\hypertarget{usage-34}{%
+\subsection{Usage}\label{usage-34}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{quantiles}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-31}{%
+\subsection{Arguments}\label{arguments-31}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{x}: Default = none
+\end{itemize}
+
+\hypertarget{details-24}{%
+\subsection{Details}\label{details-24}}
+
+This function is similar to the built-in R function ``quantile'', but it
+returns a list of pre-selected quantiles of the set of values in the
+vector ``x''. Specifically, it returns all the following quantiles:
+.005, .01, .025, .05, .1, .15, .2, .25, .3, .4, .5, .6, .7, .75, .8,
+.85, .9, .95, .975, .99, .995
+
+\hypertarget{author-26}{%
+\subsection{Author}\label{author-26}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{value-29}{%
+\subsection{Value}\label{value-29}}
+
+This function is used to construct the tables in the ``Allstats'' output
+files.
+
+\hypertarget{read.act.diaries-read.act.diaries}{%
+\section{\texorpdfstring{\texttt{read.act.diaries}:
+read.act.diaries}{read.act.diaries: read.act.diaries}}\label{read.act.diaries-read.act.diaries}}
+
+\hypertarget{description-35}{%
+\subsection{Description}\label{description-35}}
+
+Read.act.diaries reads human activity diaries from the .csv file
+indicated by ``filename''. ``Specs'' contains the run specifications
+from the run.file, and is used to subset the activity diaries by age,
+gender, or season, if requested.
+
+\hypertarget{usage-35}{%
+\subsection{Usage}\label{usage-35}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.act.diaries}\NormalTok{(filename, specs)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.chem.props-read.chem.props}{%
+\section{\texorpdfstring{\texttt{read.chem.props}:
+read.chem.props}{read.chem.props: read.chem.props}}\label{read.chem.props-read.chem.props}}
+
+\hypertarget{description-36}{%
+\subsection{Description}\label{description-36}}
+
+Read.chem.props reads the chemical properties from the .csv file
+indicated by ``filename''. ``Specs'' contains the run specifications
+from the run.file, and is used to subset the chemicals by the list
+provided on the run.file. If no such list was given, then all chemicals
+are kept.
+
+\hypertarget{usage-36}{%
+\subsection{Usage}\label{usage-36}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.chem.props}\NormalTok{(filename, specs)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.diet.diaries-read.diet.diaries}{%
+\section{\texorpdfstring{\texttt{read.diet.diaries}:
+read.diet.diaries}{read.diet.diaries: read.diet.diaries}}\label{read.diet.diaries-read.diet.diaries}}
+
+\hypertarget{description-37}{%
+\subsection{Description}\label{description-37}}
+
+Read.diet.diaries reads the food diaries from the .csv file indicated by
+``filename''. ``Specs'' contains the run specifications from the
+run.file, and is used to subset the activity diaries by age and/or
+gender.
+
+\hypertarget{usage-37}{%
+\subsection{Usage}\label{usage-37}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.diet.diaries}\NormalTok{(filename, specs)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.exp.factors-read.exp.factors}{%
+\section{\texorpdfstring{\texttt{read.exp.factors}:
+read.exp.factors}{read.exp.factors: read.exp.factors}}\label{read.exp.factors-read.exp.factors}}
+
+\hypertarget{description-38}{%
+\subsection{Description}\label{description-38}}
+
+Read.exp.factors reads the exposure factors from the .csv file indicated
+by ``filename''.
+
+\hypertarget{usage-38}{%
+\subsection{Usage}\label{usage-38}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.exp.factors}\NormalTok{(filename)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.fug.inputs-read.fug.inputs}{%
+\section{\texorpdfstring{\texttt{read.fug.inputs}:
+read.fug.inputs}{read.fug.inputs: read.fug.inputs}}\label{read.fug.inputs-read.fug.inputs}}
+
+\hypertarget{description-39}{%
+\subsection{Description}\label{description-39}}
+
+Read.fug.inputs reads the non-chemical dependent inputs for fugacity
+modeling in SHEDS from the .csv file indicated by ``filename''.
+
+\hypertarget{usage-39}{%
+\subsection{Usage}\label{usage-39}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.fug.inputs}\NormalTok{(filename)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.media.file-read.media.file}{%
+\section{\texorpdfstring{\texttt{read.media.file}:
+read.media.file}{read.media.file: read.media.file}}\label{read.media.file-read.media.file}}
+
+\hypertarget{description-40}{%
+\subsection{Description}\label{description-40}}
+
+Read.media.file reads the names, properties, and associated
+microenvironments for each of the potential exposure media in SHEDS.
+
+\hypertarget{usage-40}{%
+\subsection{Usage}\label{usage-40}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.media.file}\NormalTok{(filename)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.phys.file-read.phys.file}{%
+\section{\texorpdfstring{\texttt{read.phys.file}:
+read.phys.file}{read.phys.file: read.phys.file}}\label{read.phys.file-read.phys.file}}
+
+\hypertarget{description-41}{%
+\subsection{Description}\label{description-41}}
+
+Read.phys.file reads the physiology data from the .csv file indicated by
+``filename''.
+
+\hypertarget{usage-41}{%
+\subsection{Usage}\label{usage-41}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.phys.file}\NormalTok{(filename)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.pop.file-read.pop.file}{%
+\section{\texorpdfstring{\texttt{read.pop.file}:
+read.pop.file}{read.pop.file: read.pop.file}}\label{read.pop.file-read.pop.file}}
+
+\hypertarget{description-42}{%
+\subsection{Description}\label{description-42}}
+
+Read.pop.file reads the population data from the .csv file indicated by
+``filename''.
+
+\hypertarget{usage-42}{%
+\subsection{Usage}\label{usage-42}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.pop.file}\NormalTok{(filename, specs)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.run.file-read.run.file}{%
+\section{\texorpdfstring{\texttt{read.run.file}:
+read.run.file}{read.run.file: read.run.file}}\label{read.run.file-read.run.file}}
+
+\hypertarget{description-43}{%
+\subsection{Description}\label{description-43}}
+
+Each SHEDS run has its own ``run.file'' that the user prepares before
+the run. This file contains all the settings and file references needed
+for the run. Read.run.file occurs at the start of each SHEDS run. The
+contents of the run.file are examined, and stored in the R object
+``specs''.
+
+\hypertarget{usage-43}{%
+\subsection{Usage}\label{usage-43}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.run.file}\NormalTok{(}\AttributeTok{run.file =} \StringTok{"run\_test.txt"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.source.chem.file-read.source.chem.file}{%
+\section{\texorpdfstring{\texttt{read.source.chem.file}:
+read.source.chem.file}{read.source.chem.file: read.source.chem.file}}\label{read.source.chem.file-read.source.chem.file}}
+
+\hypertarget{description-44}{%
+\subsection{Description}\label{description-44}}
+
+Read.source.chem.file reads the distributions that are specific to
+combinations of source and chemical from the indicated .csv file.
+
+\hypertarget{usage-44}{%
+\subsection{Usage}\label{usage-44}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.source.chem.file}\NormalTok{(filename, scenSrc, specs)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.source.scen.file-read.source.scen.file}{%
+\section{\texorpdfstring{\texttt{read.source.scen.file}:
+read.source.scen.file}{read.source.scen.file: read.source.scen.file}}\label{read.source.scen.file-read.source.scen.file}}
+
+\hypertarget{description-45}{%
+\subsection{Description}\label{description-45}}
+
+Read.source.scen.file reads the list of active exposure scenarios for
+each potential source of chemical from the .csv file indicated by
+``filename''.
+
+\hypertarget{usage-45}{%
+\subsection{Usage}\label{usage-45}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.source.scen.file}\NormalTok{(filename)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{read.source.vars.file-read.source.vars.file}{%
+\section{\texorpdfstring{\texttt{read.source.vars.file}:
+read.source.vars.file}{read.source.vars.file: read.source.vars.file}}\label{read.source.vars.file-read.source.vars.file}}
+
+\hypertarget{description-46}{%
+\subsection{Description}\label{description-46}}
+
+Read.source.vars.file reads the distributions that are specific to
+combinations of source and chemical from the indicated .csv file.
+
+\hypertarget{usage-46}{%
+\subsection{Usage}\label{usage-46}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{read.source.vars.file}\NormalTok{(filename, src.scen)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{run-run}{%
+\section{\texorpdfstring{\texttt{run}: run}{run: run}}\label{run-run}}
+
+\hypertarget{description-47}{%
+\subsection{Description}\label{description-47}}
+
+Function to call the \texttt{{[}Run{]}(Run)} txt file, which consists of
+user-defined parameters and calls to input files required to initialize
+a SHEDS.HT run.
+
+\hypertarget{usage-47}{%
+\subsection{Usage}\label{usage-47}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{run}\NormalTok{(}\AttributeTok{run.file =} \StringTok{""}\NormalTok{, }\AttributeTok{wd =} \StringTok{""}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-32}{%
+\subsection{Arguments}\label{arguments-32}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{run.file}: The name of the run file to be used for a given
+  run. Many different ``Run'''' files may be set up for special
+  purposes.The one being invoked must be present in the inputs folder.
+\item
+  \texttt{wd}: The user's working directory. The working directory
+  should contain an inputs folder, containing all necessary SHEDS.HT
+  input files. The wd value should be set once for each SHEDS.HT
+  installation by replacing the default value in the definition of
+  run().
+\end{itemize}
+
+\hypertarget{details-25}{%
+\subsection{Details}\label{details-25}}
+
+This function is used to provide R with information necessary to produce
+a SHEDS-HT run and to initialize necessary parameters. No values are
+returned. In order to produce a successful run, all necessary input
+files should be stored in the working directory specified by the wd
+argument.
+
+\hypertarget{author-27}{%
+\subsection{Author}\label{author-27}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-21}{%
+\subsection{Seealso}\label{seealso-21}}
+
+\texttt{{[}Run.txt{]}(Run.txt)},
+\texttt{{[}read.run.file{]}(read.run.file)}
+
+\hypertarget{value-30}{%
+\subsection{Value}\label{value-30}}
+
+No variable will be returned.
+
+\hypertarget{scen.factor.indices-scen.factor.indices}{%
+\section{\texorpdfstring{\texttt{scen.factor.indices}:
+scen.factor.indices}{scen.factor.indices: scen.factor.indices}}\label{scen.factor.indices-scen.factor.indices}}
+
+\hypertarget{description-48}{%
+\subsection{Description}\label{description-48}}
+
+Constructs scenario-specific exposure factors for each relevant
+combination of age and gender. The input is derived internally from the
+\texttt{{[}Source\_vars{]}(Source\_vars)} file specified on the
+\texttt{{[}Run{]}(Run)} file.
+
+\hypertarget{usage-48}{%
+\subsection{Usage}\label{usage-48}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{scen.factor.indices}\NormalTok{(sdat, expgen)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-33}{%
+\subsection{Arguments}\label{arguments-33}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{sdat}: The chemical-scenario data specific to a given
+  combination of chemical and scenario.
+\item
+  \texttt{expgen}: Non-media specific exposure factors as a data table.
+  Output from \texttt{{[}gen.factor.tables{]}(gen.factor.tables)}
+\end{itemize}
+
+\hypertarget{details-26}{%
+\subsection{Details}\label{details-26}}
+
+The constructed factors are not media-specific, although they are
+scenario-specific, and most scenarios include just one surface medium.
+This function evaluats the scenario-specific exposure factors separately
+from the other factors because these scenario-specific factors may
+change with every chemical and scenario, whereas the other factors
+remain the same across chemicals and scenarios for each person.
+
+\hypertarget{author-28}{%
+\subsection{Author}\label{author-28}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{value-31}{%
+\subsection{Value}\label{value-31}}
+
+Returns indices of scenario-specific exposure factors for each relevant
+age and gender combination. The output is only generated internally.
+
+\hypertarget{select.people-select.people}{%
+\section{\texorpdfstring{\texttt{select.people}:
+select.people}{select.people: select.people}}\label{select.people-select.people}}
+
+\hypertarget{description-49}{%
+\subsection{Description}\label{description-49}}
+
+Assigns demographic and physiological variables to each theoretical
+person to be modeled.
+
+\hypertarget{usage-49}{%
+\subsection{Usage}\label{usage-49}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# S3 method for people}
+\FunctionTok{select}\NormalTok{(n, pop, py, act.p, diet.p, act.d, diet.d, specs)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-34}{%
+\subsection{Arguments}\label{arguments-34}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{n}: Number of persons.
+\item
+  \texttt{pop}: The population input; output of
+  \texttt{{[}read.pop.file{]}(read.pop.file)} function. Contains counts
+  by gender and each year of age from the 2000 U.S. census. When a large
+  age range is modeled, this ensures that SHEDS chooses age and gender
+  with the correct overall probability. \#'
+\item
+  \texttt{py}: Regression parameters on the three physiological
+  variables of interest (weight, height, and body mass index) for
+  various age and gender groups. Output of the
+  \texttt{{[}read.phys.file{]}(read.phys.file)} function.
+\item
+  \texttt{act.p}: Activity diary pools; output of the
+  \texttt{{[}act.diary.pools{]}(act.diary.pools)} function. Each element
+  in this input is a list of acceptable activity diary numbers for each
+  year of age, for each gender, weekend, and season combination.
+\item
+  \texttt{diet.p}: Dietary diary pools; output of the
+  \texttt{{[}diet.diary.pools{]}(diet.diary.pools)} function. Each
+  element in this input is a list of acceptable activity diary numbers
+  for each year of age, for each gender, weekend, and season
+  combination.
+\item
+  \texttt{act.d}: Activity diaries, which indicate the amount of time
+  and level of metabolic activity in various `micros'. Each line of data
+  represents one person-day (24 hours). Output of the
+  \texttt{{[}read.act.diaries{]}(read.act.diaries)} function.
+\item
+  \texttt{diet.d}: Daily diaries of dietary consumption by food group;
+  output of the \texttt{{[}read.diet.diaries{]}(read.diet.diaries)}
+  function. Each line represents one person-day, with demographic
+  variables followed by amounts (in grams/day) for a list of food types
+  indicated by a short abbreviation on the header line.
+\item
+  \texttt{specs}: Output of the
+  \texttt{{[}read.run.file{]}(read.run.file)} function, which can be
+  modified by the \texttt{{[}update.specs{]}(update.specs)} function
+  before input into \texttt{{[}select.people{]}(select.people)}.
+\end{itemize}
+
+\hypertarget{details-27}{%
+\subsection{Details}\label{details-27}}
+
+This is the first real step in the modeling process. It first fills an
+array \texttt{q} with uniform random numbers, with ten columns because
+there are 10 random variables defined by this function. There number of
+rows correspond to the number of persons, capped at the
+\texttt{set.size} specified in the \texttt{{[}Run{]}(Run)} input file
+(typically 5000). Gender is selected from a discrete (binomial)
+distribution where the counts of males and females in the study age
+range determines the gender probabilities. Age is tabulated next,
+separately for each gender. The counts by year of age are chosen for the
+appropriate gender and used as selection weights. Season is assigned
+randomly (equal weights) using those specified in the
+\texttt{{[}Run{]}(Run)}input file. \texttt{Weekend} is set to one or
+zero, with a chance of 2/7 for the former. The next block of code
+assigns physiological variables. Weight is lognormal in SHEDS, so a
+normal is sampled first and then \texttt{exp()} is applied. This means
+that the weight parameters refer to the properties of log(weight), which
+were fit by linear regression. The basal metabolic rate (bmr), is
+calculated by regression. A minimum bmr is set to prevent extreme cases
+from becoming zero or negative. The alveolar breathing ventilation rate
+corresponding to bmr is also calculated. The SHEDS logic sets activities
+in each micro to be a multiple of these rates, with outdoor rates higher
+than indoor, and indoor rates higher than sleep rates. This calculated
+activities affect the inhaled dose. The skin surface area is calculated
+using regressions based on height and weight for 3 age ranges. The next
+step is to assign diaries. Here, a FOR loop over n persons (n rows) is
+used to assign appropriate diet and activity diary pools to each person.
+An empirical distribution is created, consisting of the list of diary
+numbers for each pool. The final step is to retrieve the actual data
+from the chosen activity and diet diaries, and the result becomes
+\texttt{pd}.
+
+\hypertarget{author-29}{%
+\subsection{Author}\label{author-29}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-22}{%
+\subsection{Seealso}\label{seealso-22}}
+
+\texttt{{[}run{]}(run)}, \texttt{{[}read.pop.file{]}(read.pop.file)},
+\texttt{{[}read.phys.file{]}(read.phys.file)},
+\texttt{{[}act.diary.pools{]}(act.diary.pools)},
+\texttt{{[}diet.diary.pools{]}(diet.diary.pools)},
+\texttt{{[}read.act.diaries{]}(read.act.diaries)},
+\texttt{{[}read.diet.diaries{]}(read.diet.diaries)},
+\texttt{{[}update.specs{]}(update.specs)}
+
+\hypertarget{value-32}{%
+\subsection{Value}\label{value-32}}
+
+pd A dataframe of ``person-demographics'': assigned demographic and
+physiological parameters for each theoretical person modeled in SHEDS.HT
+
+\hypertarget{set.pars-set.pars}{%
+\section{\texorpdfstring{\texttt{set.pars}:
+set.pars}{set.pars: set.pars}}\label{set.pars-set.pars}}
+
+Adjusts certain SHEDS input distribution types to conform with the
+requirements of the \texttt{{[}distrib{]}(distrib)} function.
+
+\hypertarget{description-50}{%
+\subsection{Description}\label{description-50}}
+
+set.pars Adjusts certain SHEDS input distribution types to conform with
+the requirements of the \texttt{{[}distrib{]}(distrib)} function.
+
+\hypertarget{usage-50}{%
+\subsection{Usage}\label{usage-50}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.pars}\NormalTok{(vars)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-35}{%
+\subsection{Arguments}\label{arguments-35}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{vars}: Output of the
+  \texttt{{[}read.source.chem.file{]}(read.source.chem.file)} or the
+  \texttt{{[}read.source.vars.file{]}(read.source.vars.file)} functions.
+\end{itemize}
+
+\hypertarget{details-28}{%
+\subsection{Details}\label{details-28}}
+
+Set.pars adjusts certain SHEDS input distribution types to conform with
+the requirements of the Distrib function. The lognormal parameters are
+changed from arithmetic mean and standard deviation to geometric mean
+and geometric standard deviation. For the normal distribution, the
+standard deviation is computed from the mean and coefficient of
+variation (CV). For user prevalence, the input may be specified either
+as a point value (indicating probability) or as a Bernoulli
+distribution. If the former is used, it is converted to the latter.
+
+\hypertarget{author-30}{%
+\subsection{Author}\label{author-30}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-23}{%
+\subsection{Seealso}\label{seealso-23}}
+
+\texttt{{[}run{]}(run)},
+\texttt{{[}read.source.chem.file{]}(read.source.chem.file)},
+\texttt{{[}read.source.vars.file{]}(read.source.vars.file)}
+
+\hypertarget{value-33}{%
+\subsection{Value}\label{value-33}}
+
+v The modified version of the input vars.
+
+\hypertarget{setup-setup}{%
+\section{\texorpdfstring{\texttt{setup}:
+setup}{setup: setup}}\label{setup-setup}}
+
+\hypertarget{description-51}{%
+\subsection{Description}\label{description-51}}
+
+Loads required R packages and sources the modules needed to perform a
+SHEDS.HT run. The user might need to download the packages if they are
+not already present (see Dependencies).
+
+\hypertarget{usage-51}{%
+\subsection{Usage}\label{usage-51}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{setup}\NormalTok{(}\AttributeTok{wd =} \StringTok{""}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-36}{%
+\subsection{Arguments}\label{arguments-36}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{wd}: The User's working directory (set in the inputs to the
+  \texttt{{[}run{]}(run)} function). Should contain all necessary
+  SHEDS.HT inputs in an /Input folder.
+\end{itemize}
+
+\hypertarget{note-3}{%
+\subsection{Note}\label{note-3}}
+
+Requires: \texttt{{[}data.table{]}(data.table)},
+\texttt{{[}plyr{]}(plyr)}, \texttt{{[}stringr{]}(stringr)},
+\texttt{{[}ggplot2{]}(ggplot2)}
+
+\hypertarget{author-31}{%
+\subsection{Author}\label{author-31}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-24}{%
+\subsection{Seealso}\label{seealso-24}}
+
+\texttt{{[}run{]}(run)}
+
+\hypertarget{value-34}{%
+\subsection{Value}\label{value-34}}
+
+No values returned.
+
+\hypertarget{summarize.chemical-summarize.chemcial}{%
+\section{\texorpdfstring{\texttt{summarize.chemical}:
+summarize.chemcial}{summarize.chemical: summarize.chemcial}}\label{summarize.chemical-summarize.chemcial}}
+
+\hypertarget{description-52}{%
+\subsection{Description}\label{description-52}}
+
+Summarize.chemical writes a .csv file containing a summary of the
+exposure and dose results from the object ``x''.
+
+\hypertarget{usage-52}{%
+\subsection{Usage}\label{usage-52}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summarize.chemical}\NormalTok{(x, c, chem, chemical, set, sets, specs)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-37}{%
+\subsection{Arguments}\label{arguments-37}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{x}: Default = none Exposure data set
+\item
+  \texttt{c}: Default = none Index \# for chemical
+\item
+  \texttt{chem}: Default = none CAS for chemical
+\item
+  \texttt{chemical}: Default = none Full chemical name
+\item
+  \texttt{set}: Default = none Index \# for set of simulated persons
+\item
+  \texttt{sets}: Default = none Total \# of sets in this SHEDS run
+\item
+  \texttt{specs}: Default = none List of settings from the ``run'' input
+  file
+\end{itemize}
+
+\hypertarget{details-29}{%
+\subsection{Details}\label{details-29}}
+
+Tables are produced for each of the following cohorts: males, females,
+females ages 16-49, age 0-5, age 6-11, age 12-19, age 20-65, age 66+,
+and a table for all persons. The variables that are summarized are:
+dermal exposure, ingestion exposure, inhalation exposure, inhaled dose,
+intake dose, dermal absorption, ingestion absorption, inhalation
+absorption, total absorption in micrograms per day, total absorption in
+milligrams per kilogram per day, and chemical mass down the drain. In
+each table, the following statistics are computed across the appropriate
+subpopulation: mean, standard deviation, and quantiles .005, .01, .025,
+.05, .1, .15, .2, .25, .3, .4, .5, .6, .7, .75, .8, .85, .9, .95, .975,
+.99, .995.
+
+\hypertarget{author-32}{%
+\subsection{Author}\label{author-32}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{value-35}{%
+\subsection{Value}\label{value-35}}
+
+If ``x'' is a single set of data (that is, if the argument ``set'' is
+between 1 and sets, inclusive), then the .csv file created by this
+function has the suffix ``\_set\#stats.csv'', where ``\#'' is the set
+number. If the ``set'' argument is ``allstats'', then the .csv file has
+the suffix \_allstats.csv''. The output file contains the tables for all
+cohorts with a non-zero population.
+
+\hypertarget{summary.stats-summary.stats}{%
+\section{\texorpdfstring{\texttt{summary.stats}:
+summary.stats}{summary.stats: summary.stats}}\label{summary.stats-summary.stats}}
+
+\hypertarget{description-53}{%
+\subsection{Description}\label{description-53}}
+
+Summary.stats constructs the table of exposure and dose statistics for
+cohort entered into
+\texttt{{[}summarize.chemical{]}(summarize.chemical)}.
+
+\hypertarget{usage-53}{%
+\subsection{Usage}\label{usage-53}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# S3 method for stats}
+\FunctionTok{summary}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-38}{%
+\subsection{Arguments}\label{arguments-38}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{x.}: Data set passed from summarize.chemical for a cohort
+\end{itemize}
+
+\hypertarget{details-30}{%
+\subsection{Details}\label{details-30}}
+
+Summary.stats is called by
+\texttt{{[}summarize.chemical{]}(summarize.chemical)}. The input data
+set ``y'' is one population cohort from the exposure data set passed
+into \texttt{{[}summarize.chemical{]}(summarize.chemical)}.
+
+\hypertarget{author-33}{%
+\subsection{Author}\label{author-33}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{seealso-25}{%
+\subsection{Seealso}\label{seealso-25}}
+
+\texttt{{[}summarize.chemical{]}(summarize.chemical)}
+
+\hypertarget{value-36}{%
+\subsection{Value}\label{value-36}}
+
+y A data frame object with 23 rows and 11 columns, with each column
+being an exposure or dose variable, and each row containing a statistic
+for that variable. For each expsoure varianle the total expsoure,
+quantiles, mean, and SD.
+
+\hypertarget{trimzero-trimzero}{%
+\section{\texorpdfstring{\texttt{trimzero}:
+Trimzero}{trimzero: Trimzero}}\label{trimzero-trimzero}}
+
+\hypertarget{description-54}{%
+\subsection{Description}\label{description-54}}
+
+This function removes initial zeroes from CAS numbers.
+
+\hypertarget{usage-54}{%
+\subsection{Usage}\label{usage-54}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{trimzero}\NormalTok{(x, y)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arguments-39}{%
+\subsection{Arguments}\label{arguments-39}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{x}: aCAS number. Defult is none
+\item
+  \texttt{y}: A dummy argument This helps with the removal of the zeros
+  inteh CAS number
+\end{itemize}
+
+\hypertarget{details-31}{%
+\subsection{Details}\label{details-31}}
+
+Each CAS number has three parts, separated by underscores. The first
+part is up to seven digits, but optionally, leading zeroes are omitted.
+For example, formaldehyde may be either ``0000050\_00\_0'' or
+``50\_00\_0''. SHEDS needs to match CAS numbers across input files, and
+trimzero is used to ensure matching even when the input files follow
+different conventions.
+
+\hypertarget{author-34}{%
+\subsection{Author}\label{author-34}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{value-37}{%
+\subsection{Value}\label{value-37}}
+
+y a shorter CAS number. If the initial part is all zero (as in
+``0000000\_12\_3''), one zero is left in the first part (that is,
+``0\_12\_3'' for this example).
+
+\hypertarget{unpack-unpack}{%
+\section{\texorpdfstring{\texttt{unpack}:
+unpack}{unpack: unpack}}\label{unpack-unpack}}
+
+\hypertarget{description-55}{%
+\subsection{Description}\label{description-55}}
+
+unpack
+
+\hypertarget{usage-55}{%
+\subsection{Usage}\label{usage-55}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{unpack}\NormalTok{(}\AttributeTok{filelist =} \StringTok{""}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{details-32}{%
+\subsection{Details}\label{details-32}}
+
+This function is used when ShedsHT is run as an R package. Each time a
+new working directory is chosen, use unpack() to convert the R data
+objects into CSV files. Note that both /inputs and /output folders are
+needed under the chosen directory.Unpack() may be used with a list of
+object names, in which case just those objects are converted to CSV.
+This is useful when re-loading one or more defaults into a folder where
+some of the CSV files have changes, and should not be overwritten. A
+blank argument or empty list means that all the csv and TXT files in the
+R package are converted.
+
+\hypertarget{author-35}{%
+\subsection{Author}\label{author-35}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{update.specs-update.specs}{%
+\section{\texorpdfstring{\texttt{update.specs}:
+update.specs}{update.specs: update.specs}}\label{update.specs-update.specs}}
+
+\hypertarget{description-56}{%
+\subsection{Description}\label{description-56}}
+
+``Specs'' is the list of run settings read from the run.file. ``Dt'' is
+a data table of source-chemical combinations for which distributions
+have been specified. ``Specs'' contains a list of chemicals to be
+processed in the SHEDS run, and if any of these chemicals are missing
+from the ``dt'' table, then update.specs removes them from the list.
+Otherwise, ``specs'' is not altered.
+
+\hypertarget{usage-56}{%
+\subsection{Usage}\label{usage-56}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# S3 method for specs}
+\FunctionTok{update}\NormalTok{(specs, dt)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{vpos-vpos}{%
+\section{\texorpdfstring{\texttt{vpos}:
+vpos}{vpos: vpos}}\label{vpos-vpos}}
+
+\hypertarget{description-57}{%
+\subsection{Description}\label{description-57}}
+
+This function locates an item in a list.
+
+\hypertarget{usage-57}{%
+\subsection{Usage}\label{usage-57}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{vpos}\NormalTok{(v, list)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{details-33}{%
+\subsection{Details}\label{details-33}}
+
+this one was written because it does not require additional R packages
+and its behavior can be easily examined.
+
+\hypertarget{author-36}{%
+\subsection{Author}\label{author-36}}
+
+Kristin Isaacs, Graham Glen
+
+\hypertarget{write.persons-write.persons}{%
+\section{\texorpdfstring{\texttt{write.persons}:
+write.persons}{write.persons: write.persons}}\label{write.persons-write.persons}}
+
+\hypertarget{description-58}{%
+\subsection{Description}\label{description-58}}
+
+This function writes demographic, exposure, and dose variables to a
+separate output file for each chemical.
+
+\hypertarget{usage-58}{%
+\subsection{Usage}\label{usage-58}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.persons}\NormalTok{(x, chem, set, specs)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{details-34}{%
+\subsection{Details}\label{details-34}}
+
+THis function rounds the variables to a reasonable precision so that the
+files are more readable, as unrounded output is cluttered with entries
+with (say) 14 digits, most of which are not significant.
+
+\hypertarget{author-37}{%
+\subsection{Author}\label{author-37}}
+
+Kristin Isaacs, Graham Glen
+
+\end{document}
